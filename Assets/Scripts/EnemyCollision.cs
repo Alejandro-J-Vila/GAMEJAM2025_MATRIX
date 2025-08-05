@@ -12,12 +12,17 @@ public class EnemyCollision : MonoBehaviour
 
     }
     
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        // When the enemy collides with the player, damages him
-        if (other.CompareTag("Player"))
+        // When the enemy collides with the player
+        if (other.collider.CompareTag("Player"))
         {
-            //TODO
+            // Damages him
+            GameManager.gm.DamagePlayer();
+            // Add progress
+            GameManager.gm.AddProgress();
+            // Die
+            Destroy(gameObject);
         }
     }
 }

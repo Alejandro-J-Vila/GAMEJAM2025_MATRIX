@@ -65,6 +65,12 @@ public class PlayerController2D : MonoBehaviour
             // Create a projectile on the spawn point position, with player rotation and fire it
             Instantiate(projectilePrefab, projectileSpawn.transform.position, transform.rotation);
         }
+        // If the player hits the help button
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            // Show/Hide help panel
+            GameManager.gm.Help();
+        }
     }
 
     void FixedUpdate()
