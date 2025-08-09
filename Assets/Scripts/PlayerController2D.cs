@@ -32,8 +32,8 @@ public class PlayerController2D : MonoBehaviour
         {
             // Set movement direction based on input
             movement = new Vector2(horizontalInput, verticalInput);
-            // Rotate the player based on movement direction
-            RotatePlayer(horizontalInput, verticalInput);
+            // Rotate the projectile spawn based on movement direction
+            RotateProjectileSpawn(horizontalInput, verticalInput);
         }
         else
         {
@@ -47,23 +47,23 @@ public class PlayerController2D : MonoBehaviour
                 isMovingHorizontally = false;
             }
 
-            // Set movement direction and rotate the player
+            // Set movement direction and rotate the projectile spawn
             if (isMovingHorizontally)
             {
                 movement = new Vector2(horizontalInput, 0);
-                RotatePlayer(horizontalInput, 0);
+                RotateProjectileSpawn(horizontalInput, 0);
             }
             else
             {
                 movement = new Vector2(0, verticalInput);
-                RotatePlayer(0, verticalInput);
+                RotateProjectileSpawn(0, verticalInput);
             }
         }
         // If the player hits the fire button
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Create a projectile on the spawn point position, with player rotation and fire it
-            Instantiate(projectilePrefab, projectileSpawn.transform.position, transform.rotation);
+            Instantiate(projectilePrefab, projectileSpawn.transform.position, projectileSpawn.transform.rotation);
         }
         // If the player hits the help button
         if (Input.GetKeyDown(KeyCode.H))
@@ -79,17 +79,17 @@ public class PlayerController2D : MonoBehaviour
         rb.linearVelocity = movement * speed;
     }
 
-    void RotatePlayer(float x, float y)
+    void RotateProjectileSpawn(float x, float y)
     {
-        // If there is no input, do not rotate the player
+        // If there is no input, do not rotate the projectile spawn
         if (x == 0 && y == 0)
         {
             return;
         }
         // Calculate the rotation angle based on input direction
         float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
-        // Apply the rotation to the player
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        // Apply the rotation to the projectile spawn
+        projectileSpawn.transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
     private void CheckBoundaries()

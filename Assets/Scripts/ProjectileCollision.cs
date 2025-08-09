@@ -23,9 +23,5 @@ public class ProjectileCollision : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
-        else
-        {
-            //TODO
-        }
     }
 }
