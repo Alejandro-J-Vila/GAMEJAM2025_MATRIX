@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour
 {
-    public float speed = 10f; // Projectile speed
-    private float lifetime = 5f; // Time until the projectile destroys itself
+    public float speed = 8; // Projectile speed
+    private float lifetime = 5; // Time until the projectile destroys itself
     private GameObject target; // Reference to the target, aka the player
     private Rigidbody2D rb; // Reference to the rigid body of the projectile
 
@@ -23,11 +23,6 @@ public class EnemyProjectile : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, projectileRotation + 90);
         // Destroy the projectile after it's lifetime has passed
         Destroy(gameObject, lifetime);
-    }
-
-    void Update()
-    {
-        
     }
 
     void OnTriggerEnter2D(Collider2D collision)

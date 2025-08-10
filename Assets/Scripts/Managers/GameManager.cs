@@ -81,9 +81,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void UseCollectible(string type)
+    public void UsePowerUp(string type)
     {
-        // If its a life collectible
+        // If its a life power up
         if (type == "life")
         {
             SpawnManager.sm.ConsumePowerUp();

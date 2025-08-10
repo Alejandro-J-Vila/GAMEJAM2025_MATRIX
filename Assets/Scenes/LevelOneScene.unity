@@ -2050,9 +2050,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0506cedde87c4c0489ee28f5ddf1017f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyKamikaze: {fileID: 8564817775985817816, guid: 9f7decffe1a07dd498d6efdc62165889, type: 3}
-  enemyStatic: {fileID: 6483595860294749203, guid: 64a694afc3539064eb77bead7863bfe7, type: 3}
-  powerUp: {fileID: 4988300658861009456, guid: 0e7ac86309f8a004fb4efd56e827ebb0, type: 3}
+  enemyKamikaze: {fileID: 8757736421450549662, guid: 9f7decffe1a07dd498d6efdc62165889, type: 3}
+  enemyStatic: {fileID: 8089031375520503587, guid: 64a694afc3539064eb77bead7863bfe7, type: 3}
+  powerUp: {fileID: 4990317263673600233, guid: 0e7ac86309f8a004fb4efd56e827ebb0, type: 3}
   staticSpawn: {fileID: 796697882}
   enemySpawnPoints:
   - {fileID: 753178366}
@@ -2791,7 +2791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   canMoveDiagonally: 1
-  projectilePrefab: {fileID: 5595158598249400696, guid: d75fab7b4fb33fa47bfdcce91b54b53c, type: 3}
+  projectilePrefab: {fileID: 8819220275342117973, guid: d75fab7b4fb33fa47bfdcce91b54b53c, type: 3}
   projectileSpawn: {fileID: 1547035249}
 --- !u!1 &2137193608
 GameObject:
