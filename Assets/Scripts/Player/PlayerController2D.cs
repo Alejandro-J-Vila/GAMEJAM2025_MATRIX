@@ -22,49 +22,12 @@ public class PlayerController2D : MonoBehaviour
 
     void Update()
     {
-        // Get player input from keyboard or controller
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-        float verticalInput = Input.GetAxisRaw("Vertical");
         // Check if the player reached any of the screen boundaries
         CheckBoundaries();
-        // Check if diagonal movement is allowed
-        if (canMoveDiagonally)
-        {
-            // Set movement direction based on input
-            movement = new Vector2(horizontalInput, verticalInput);
-            // Rotate the projectile spawn based on movement direction
-            RotateProjectileSpawn(horizontalInput, verticalInput);
-        }
-        else
-        {
-            // Determine the priority of movement based on input
-            if (horizontalInput != 0)
-            {
-                isMovingHorizontally = true;
-            }
-            else if (verticalInput != 0)
-            {
-                isMovingHorizontally = false;
-            }
-
-            // Set movement direction and rotate the projectile spawn
-            if (isMovingHorizontally)
-            {
-                movement = new Vector2(horizontalInput, 0);
-                RotateProjectileSpawn(horizontalInput, 0);
-            }
-            else
-            {
-                movement = new Vector2(0, verticalInput);
-                RotateProjectileSpawn(0, verticalInput);
-            }
-        }
-        // If the player hits the fire button
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // Create a projectile on the spawn point position, with player rotation and fire it
-            Instantiate(projectilePrefab, projectileSpawn.transform.position, projectileSpawn.transform.rotation);
-        }
+        // Move the player
+        ManageMovement();
+        // Shoot
+        ManageShooting();
         // If the player hits the help button
         if (Input.GetKeyDown(KeyCode.H))
         {
@@ -77,6 +40,72 @@ public class PlayerController2D : MonoBehaviour
     {
         // Apply movement to the player in FixedUpdate for physics consistency
         rb.linearVelocity = movement * speed;
+    }
+
+    void ManageMovement()
+    {
+        // Get player input from keyboard or controller
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
+        // Check if diagonal movement is allowed
+        if (canMoveDiagonally)
+        {
+            // Set movement direction based on input
+            movement = new Vector2(horizontalInput, verticalInput);
+        }
+        else
+        {
+            // Determine the priority of movement based on input
+            if (horizontalInput != 0)
+            {
+                isMovingHorizontally = true;
+            }
+            else if (verticalInput != 0)
+            {
+                isMovingHorizontally = false;
+            }
+            // Set movement direction
+            if (isMovingHorizontally)
+            {
+                movement = new Vector2(horizontalInput, 0);
+            }
+            else
+            {
+                movement = new Vector2(0, verticalInput);
+            }
+        }
+    }
+
+    void ManageShooting()
+    {
+        Vector2 shootDirection = Vector2.zero;
+        // If the player hits any of the fire buttons (arrow keys), shoot in that direction
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Shoot(Vector2.up);
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            Shoot(Vector2.down);
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            Shoot(Vector2.right);
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            Shoot(Vector2.left);
+        }
+    }
+
+    void Shoot(Vector2 direction)
+    {
+        // Rotate the projectile spawn in the shooting direction
+        RotateProjectileSpawn(direction.x, direction.y);
+        // Create the projectile to shoot
+        GameObject proj = Instantiate(projectilePrefab, projectileSpawn.transform.position, projectileSpawn.transform.rotation);
+        // Set the projectile direction
+        proj.GetComponent<PlayerProjectile>().SetDirection(direction);
     }
 
     void RotateProjectileSpawn(float x, float y)
@@ -92,7 +121,7 @@ public class PlayerController2D : MonoBehaviour
         projectileSpawn.transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
-    private void CheckBoundaries()
+    void CheckBoundaries()
     {
         // If the player reach the right or left boundaries of the screen, stop him
         if(transform.position.x < -horizontalLimit)

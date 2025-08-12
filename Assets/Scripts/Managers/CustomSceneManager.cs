@@ -27,7 +27,7 @@ public class CustomSceneManager : MonoBehaviour
     private void Update()
     {
         // Check if the user is on a non-main scene and presses the Escape key
-        if (SceneManager.GetActiveScene().buildIndex != 0 && Input.GetKeyDown(KeyCode.Escape))
+        if (SceneManager.GetActiveScene().buildIndex != 0 && Input.GetKeyDown(KeyCode.Q))
         {
             // Load the main scene (assuming the main scene is at build index 0)
             LoadScene(0);

@@ -4,17 +4,27 @@ public class PlayerProjectile : MonoBehaviour
 {
     public float speed = 10; // Projectile speed
     private float lifetime = 5; // Time until the projectile destroys itself
+    private Vector2 movementDirection; // Projectile direction
+    private Rigidbody2D rb; // Reference to the rigid body of the projectile
 
     void Start()
     {
+        // Get the rigid body component to apply movement
+        rb = GetComponent<Rigidbody2D>();
         // Destroy the projectile after it's lifetime has passed
         Destroy(gameObject, lifetime);
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        // Moves the object forward
-        transform.Translate(Vector2.right * Time.deltaTime * speed);
+        // Move the projectile
+        rb.linearVelocity = movementDirection * speed;
+    }
+
+    public void SetDirection(Vector2 direction)
+    {
+        // Sets the movement direction
+        movementDirection = direction;
     }
 
     void OnTriggerEnter2D(Collider2D other)

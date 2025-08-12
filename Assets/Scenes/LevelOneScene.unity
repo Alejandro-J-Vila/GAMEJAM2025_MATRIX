@@ -1347,7 +1347,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press esc to quit
+  m_text: Press Q to quit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d7e4c035915e46d7a4bf4722e72f951, type: 2}
   m_sharedMaterial: {fileID: 21699584260080902, guid: 3d7e4c035915e46d7a4bf4722e72f951, type: 2}
@@ -1861,7 +1861,7 @@ Transform:
   m_GameObject: {fileID: 1547035249}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.000000014901161, w: 1}
-  m_LocalPosition: {x: -0.05, y: -0, z: 0}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2467,7 +2467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press esc to quit
+  m_text: Press Q to quit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d7e4c035915e46d7a4bf4722e72f951, type: 2}
   m_sharedMaterial: {fileID: 21699584260080902, guid: 3d7e4c035915e46d7a4bf4722e72f951, type: 2}
@@ -2791,7 +2791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   canMoveDiagonally: 1
-  projectilePrefab: {fileID: 8819220275342117973, guid: d75fab7b4fb33fa47bfdcce91b54b53c, type: 3}
+  projectilePrefab: {fileID: 773794677073618164, guid: d75fab7b4fb33fa47bfdcce91b54b53c, type: 3}
   projectileSpawn: {fileID: 1547035249}
 --- !u!1 &2137193608
 GameObject:
@@ -2852,14 +2852,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'HELP
 
-    W,A,S,D or Arrow Keys -> move
+    W,A,S,D -> move
 
-    Space bar -> shoot
+    Arrow keys -> shoot
 
-    H
-    -> show/hide help
+    H -> show/hide
+    help
 
-    Esc -> quit'
+    Q -> quit'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d7e4c035915e46d7a4bf4722e72f951, type: 2}
   m_sharedMaterial: {fileID: 21699584260080902, guid: 3d7e4c035915e46d7a4bf4722e72f951, type: 2}
