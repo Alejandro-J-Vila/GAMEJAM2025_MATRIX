@@ -36,6 +36,8 @@ public class PlayerProjectile : MonoBehaviour
             GameManager.gm.AddProgress();
             // Spawn a power up in the enemy position
             SpawnManager.sm.SpawnPowerUp(other.transform.position, Quaternion.identity);
+            // Play enemy death sound
+            SoundManager.sm.PlaySound(other.gameObject.GetComponent<Enemy>().deathSoundID);
             // Destroy the projectile and the enemy
             Destroy(other.gameObject);
             Destroy(gameObject);

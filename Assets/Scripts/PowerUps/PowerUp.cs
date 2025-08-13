@@ -4,6 +4,7 @@ public class PowerUp : MonoBehaviour
 {
     public string powerUpType; // Power up type
     public float rotationSpeed = 90f; // Power up rotation speed
+    public string powerUpPickUpSoundID; // Power up pick up sound id
 
     void Update()
     {
@@ -16,9 +17,11 @@ public class PowerUp : MonoBehaviour
         // When the player collides with a power up
         if (other.CompareTag("Player"))
         {
-            // Use it
+            // Use the powerup
             GameManager.gm.UsePowerUp(powerUpType);
-            // Destroy it
+            // Play the sound of the powerup
+            SoundManager.sm.PlaySound(powerUpPickUpSoundID);
+            // Destroy the powerup
             Destroy(gameObject);
         }
     }

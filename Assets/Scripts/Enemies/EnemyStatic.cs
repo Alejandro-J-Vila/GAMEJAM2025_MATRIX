@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyStatic : MonoBehaviour
+public class EnemyStatic : Enemy
 {
     public GameObject projectile; // Reference to the enemy projectile
     public GameObject projectileSpawn; // Spawn point for enemy projectiles
@@ -25,5 +25,7 @@ public class EnemyStatic : MonoBehaviour
     {
         // Create projectile in the spawn point to fire it
         Instantiate(projectile, projectileSpawn.transform.position, projectileSpawn.transform.rotation);
+        // Play attack sound
+        //SoundManager.sm.PlaySound(attackSoundID);
     }
 }

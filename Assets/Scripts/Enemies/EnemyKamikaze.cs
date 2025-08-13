@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyKamikaze : MonoBehaviour
+public class EnemyKamikaze : Enemy
 {
     public float movementSpeed = 3; // Enemy movement speed
     private GameObject target; // Enemy's target to chase
@@ -27,11 +27,13 @@ public class EnemyKamikaze : MonoBehaviour
         // When the enemy collides with the player
         if (other.collider.CompareTag("Player"))
         {
-            // Damages him
+            // Damages the player
             GameManager.gm.DamagePlayer();
             // Add progress
             GameManager.gm.AddProgress();
-            // Die
+            // Play the sound of the enemy death
+            SoundManager.sm.PlaySound(attackSoundID);
+            // Destroy enemy
             Destroy(gameObject);
         }
     }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7405246411623538271}
   - component: {fileID: 1485674049624544233}
   - component: {fileID: 8658077159664922224}
-  - component: {fileID: 494989007193746056}
+  - component: {fileID: 2017382789562587597}
   m_Layer: 0
   m_Name: EnemyKamikaze
   m_TagString: Enemy
@@ -163,7 +163,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &494989007193746056
+--- !u!114 &2017382789562587597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,4 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6103a3925d076346a2b286609d07710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSoundID: Kamikaze_Hit
+  deathSoundID: Enemy_Death
   movementSpeed: 3
