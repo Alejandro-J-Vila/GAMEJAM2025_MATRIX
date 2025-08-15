@@ -11,9 +11,11 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverPanel; // Game over panel
     public GameObject gameVictoryPanel; // Game victory panel
     public GameObject helpPanel; // Game help panel
+    public GameObject pausePanel;// Game pause panel
     private bool gameover = false; // Game over flag
     private bool win = false; // Game victory flag
     private bool help = true; // Game help flag
+    private bool paused = false;
     private float progress = 0f; // Amount of progress
     private float progressIncrement = 0.02f; // Increment progress (1/50) 50 enemies needed to win
     void Start()
@@ -31,6 +33,8 @@ public class GameManager : MonoBehaviour
         gameVictoryPanel.SetActive(win);
         // Show help panel
         helpPanel.SetActive(help);
+        //Show pause panel
+        pausePanel.SetActive(paused);
         // Set progress bar fill to empty
         progressFill.fillAmount = progress;
     }
@@ -102,4 +106,20 @@ public class GameManager : MonoBehaviour
         help = !help;
         helpPanel.SetActive(help);
     }
+    public void pauseGame(){
+        if(this.paused){
+            Time.timeScale=1;
+            Debug.Log("Despausando el juego...");
+            this.paused=false;
+            pausePanel.SetActive(false);
+        }else{
+            Time.timeScale=0;
+            Debug.Log("Pausando el juego");
+            this.paused=true;
+            pausePanel.SetActive(true);
+
+        }
+
+    }
+
 }

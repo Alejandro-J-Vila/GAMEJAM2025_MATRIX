@@ -33,6 +33,7 @@ public class PlayerController2D : MonoBehaviour
         {
             // Show/Hide help panel
             GameManager.gm.Help();
+            GameManager.gm.pauseGame();
         }
     }
 
