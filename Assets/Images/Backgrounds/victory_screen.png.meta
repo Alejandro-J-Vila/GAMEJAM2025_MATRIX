@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 94b1fefbbe5c9fd488d34cccb1d7a877
+guid: 00f567af35934074498b2340bb8c1a2f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3855313430894299776
-    second: Progress_Bar_Fill_0
+      213: 6811962689360592581
+    second: victory_screen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Progress_Bar_Fill_0
+      name: victory_screen_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 98
-        height: 36
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 085b0c56cdc2f7ac0800000000000000
-      internalID: -3855313430894299776
+      spriteID: 5ce7d8289f3f88e50800000000000000
+      internalID: 6811962689360592581
       vertices: []
       indices: 
       edges: []
