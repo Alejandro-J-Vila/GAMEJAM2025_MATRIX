@@ -10,6 +10,8 @@ TagManager:
   - MusicPlayer
   - SoundPlayer
   - Enemy
+  - SoundToggle
+  - MusicToggle
   layers:
   - Default
   - TransparentFX

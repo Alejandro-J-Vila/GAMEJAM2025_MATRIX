@@ -20,6 +20,33 @@ public class EnemyKamikaze : Enemy
     {
         // Calculate the movement direction towards the target
         transform.position = Vector2.MoveTowards(transform.position, target.transform.position, Time.deltaTime * movementSpeed);
+        FaceTarget();
+    }
+
+    void FaceTarget()
+    {
+        // Get the direction of the enemy
+        Vector2 targetDirection = (target.transform.position - transform.position).normalized;
+        // If the target is in the right side of the screen
+        if (targetDirection.x >= 0)
+        {
+            // If the enemy is not facing right
+            if (transform.rotation.y > 0)
+            {
+                // Flip the enemy to face to the right
+                transform.RotateAround(transform.position, Vector3.up, -180);
+            }
+        }
+        else
+        {
+            // If the target is in the left side of the screen
+            // If the enemy is not facing left
+            if (transform.rotation.y == 0)
+            {
+                // Flip the enemy to face to the left
+                transform.RotateAround(transform.position, Vector3.up, 180);
+            }
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other)

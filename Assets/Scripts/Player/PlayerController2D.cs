@@ -28,12 +28,10 @@ public class PlayerController2D : MonoBehaviour
         ManageMovement();
         // Shoot
         ManageShooting();
-        // If the player hits the help button
-        if (Input.GetKeyDown(KeyCode.H))
+        // If the player hits the pause button
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            // Show/Hide help panel
-            GameManager.gm.Help();
-            GameManager.gm.pauseGame();
+            GameManager.gm.PauseGame();
         }
     }
 

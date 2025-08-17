@@ -14,7 +14,7 @@ public class EnemyProjectile : MonoBehaviour
         // Get target reference
         target = GameObject.FindGameObjectWithTag("Player");
         // Get a direction for the projectile to follow
-        Vector3 direction = target.transform.position - transform.position;
+        Vector2 direction = target.transform.position - transform.position;
         // Move the projectile towards the target
         rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * speed;
         // Get the angle in which the projectile has to turn to face the target

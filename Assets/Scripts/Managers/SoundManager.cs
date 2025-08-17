@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
@@ -11,6 +14,10 @@ public class SoundManager : MonoBehaviour
     private Dictionary<string, int> soundMap; // Dictionary that map sound names to list index numbers
     private AudioSource soundsAudioSource; // Reference to the audio source that play sound effects in the scene
     private AudioSource musicAudioSource; // Reference to the audio source that play music in the scene
+    private TMP_Text soundToggle; // Reference to the sound toggle
+    private TMP_Text musicToggle; // Reference to the music toggle
+    private bool soundOn = true; // Flag for sound on/off
+    private bool musicOn = true; // Flag for music on/off
 
     void Start()
     {
@@ -37,6 +44,13 @@ public class SoundManager : MonoBehaviour
         soundsAudioSource = GameObject.FindWithTag("SoundPlayer").GetComponent<AudioSource>();
         // Get the reference to the music audio source in the scene
         musicAudioSource = GameObject.FindWithTag("MusicPlayer").GetComponent<AudioSource>();
+        // If the current scene is the settings scene or the game scene (where the toggles exist)
+        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            // Get the reference to the toggles and save the text component for further modification when interacted
+            soundToggle = GameObject.FindGameObjectWithTag("SoundToggle").GetComponentInChildren<TMP_Text>();
+            musicToggle = GameObject.FindGameObjectWithTag("MusicToggle").GetComponentInChildren<TMP_Text>();
+        }
     }
 
     public void PlayMusic(int musicListIndex)
@@ -48,5 +62,43 @@ public class SoundManager : MonoBehaviour
     {
         // Play sound clip selected using the index obtained from the sound map
         soundsAudioSource.PlayOneShot(soundList[soundMap[soundName]]);
+    }
+
+    public void SoundOn()
+    {
+        // If sound is on
+        if (soundOn == true)
+        {
+            // Turn it off
+            soundOn = false;
+            // Update toggle text
+            soundToggle.SetText("SOUND OFF");
+        }
+        else
+        {
+            // If sound is off, turn it on
+            soundOn = true;
+            // Update toggle text
+            soundToggle.SetText("SOUND ON");
+        }
+    }
+
+    public void MusicOn()
+    {
+        // If music is on
+        if (musicOn == true)
+        {
+            // Turn it off
+            musicOn = false;
+            // Update toggle text
+            musicToggle.SetText("MUSIC OFF");
+        }
+        else
+        {
+            // If music is off, turn it on
+            musicOn = true;
+            // Update toggle text
+            musicToggle.SetText("MUSIC ON");
+        }
     }
 }

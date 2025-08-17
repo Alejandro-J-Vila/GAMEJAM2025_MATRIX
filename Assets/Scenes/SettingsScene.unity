@@ -380,7 +380,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BACK
+  m_text: BACK (Q)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
   m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 366922736}
   m_Layer: 5
   m_Name: MusicOnOff_Toggle
-  m_TagString: Untagged
+  m_TagString: MusicToggle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -558,10 +558,10 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 366922736}
-        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
-        m_MethodName: OnToggleMusic
-        m_Mode: 0
+      - m_Target: {fileID: 392791682}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: MusicOn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1732,7 +1732,7 @@ GameObject:
   - component: {fileID: 1646829716}
   m_Layer: 5
   m_Name: SoundOnOff_Toggle
-  m_TagString: Untagged
+  m_TagString: SoundToggle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1806,10 +1806,10 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1646829716}
-        m_TargetAssemblyTypeName: Sound, Assembly-CSharp
-        m_MethodName: OnToggleSound
-        m_Mode: 0
+      - m_Target: {fileID: 392791682}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: SoundOn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
