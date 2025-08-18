@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gm; // Static reference of the game manager
+    public GameObject player; // Reference to the player for animations
     public int playerLives = 5; // Player lives count
     public GameObject[] lives; // Player lives references
     public Image progressFill; // Progress bar fill image
@@ -41,6 +42,8 @@ public class GameManager : MonoBehaviour
 
     public void DamagePlayer()
     {
+        // Play damage animation
+        player.GetComponent<Animator>().Play("Player_Damage", -1);
         // If the player have lives left
         if (playerLives > 0)
         {
@@ -90,6 +93,8 @@ public class GameManager : MonoBehaviour
             // And the player has less than maximum lives
             if (playerLives < 5)
             {
+                // Play heal animation
+                player.GetComponent<Animator>().Play("Player_Heal", -1);
                 // Enable the corresponding life slot and update the lives count
                 lives[playerLives].transform.Find("Life_Interior").gameObject.SetActive(true);
                 playerLives++;

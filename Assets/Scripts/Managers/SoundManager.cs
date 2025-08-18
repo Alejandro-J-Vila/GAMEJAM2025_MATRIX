@@ -63,29 +63,44 @@ public class SoundManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        // If the scene loaded is the main menu
         if (scene.name == "MainMenuScene")
         {
+            // If music is on
             if (musicOn)
             {
+                // Stop the current music clip
                 musicAudioSource.Stop();
+                // Select the main menu clip
                 musicAudioSource.clip = musicList[musicMap["Main_Menu"]];
+                // Activate clip loop
                 musicAudioSource.loop = true;
+                // Play the music clip
                 musicAudioSource.Play();
             }
         }
+        // If the scene loaded is the settings
         if (scene.name == "SettingsScene")
         {
+            // Set the sound and music toggles
             SetToggles();
         }
+        // If the scene loaded is the level
         if (scene.name == "LevelOneScene")
         {
+            // If music is on
             if (musicOn)
             {
+                // Stop the current music clip
                 musicAudioSource.Stop();
+                // Select the level clip
                 musicAudioSource.clip = musicList[musicMap["Level_One"]];
+                // Activate clip loop
                 musicAudioSource.loop = true;
+                // Play the music clip
                 musicAudioSource.Play();
             }
+            // Set the sound and music toggles from the pause panel
             SetToggles();
         }
     }
@@ -95,7 +110,9 @@ public class SoundManager : MonoBehaviour
         // If music is on
         if (musicOn)
         {
+            // Stop the current clip
             musicAudioSource.Stop();
+            // Deactivate clip loop
             musicAudioSource.loop = false;
             // Play a music clip selected with index from a list of clips stored in the manager
             musicAudioSource.PlayOneShot(musicList[musicMap[musicName]]);
