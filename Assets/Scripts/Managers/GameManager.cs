@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             // Display game over panel
             gameOverPanel.SetActive(gameover);
+            SoundManager.sm.PlayMusic("Game_Over");
         }
     }
 

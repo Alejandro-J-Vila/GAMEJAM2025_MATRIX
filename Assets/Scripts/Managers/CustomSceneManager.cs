@@ -34,7 +34,6 @@ public class CustomSceneManager : MonoBehaviour
         }
     }
 
-
     // General method to load scenes based on build index
     private void LoadScene(int sceneIndex)
     {
