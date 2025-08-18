@@ -33,6 +33,11 @@ public class PlayerController2D : MonoBehaviour
         {
             GameManager.gm.PauseGame();
         }
+        // If the player hits the help button
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            GameManager.gm.ShowHelp();
+        }
     }
 
     void FixedUpdate()

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 44b652ad1be50124d8c095c7f23af695
+guid: ddb83daf957afbe4e890a2642b19f14d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9048593517765135490
-    second: button_background_0
+      213: 5418754806234620808
+    second: enemy_attack_3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: button_background_0
+      name: enemy_attack_3_0
       rect:
         serializedVersion: 2
-        x: 233
-        y: 62
-        width: 1435
-        height: 210
+        x: 0
+        y: 113
+        width: 569
+        height: 122
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 95, y: 103, z: 99, w: 79}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e73f4b81320fc6280800000000000000
-      internalID: -9048593517765135490
+      spriteID: 8832e8659c8433b40800000000000000
+      internalID: 5418754806234620808
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 521fa0098fb286a42a12dc804e7dbd97
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      button_background_0: -9048593517765135490
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

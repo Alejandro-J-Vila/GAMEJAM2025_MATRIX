@@ -12,9 +12,11 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverPanel; // Game over panel
     public GameObject gameVictoryPanel; // Game victory panel
     public GameObject pausePanel; // Game pause panel
+    public GameObject helpPanel; // Help panel
     private bool gameover = false; // Game over flag
     private bool win = false; // Game victory flag
     private bool paused = false; // Paused game flag
+    private bool help = false; // Help flag
     private float progress = 0f; // Amount of progress
     private float progressIncrement = 0.02f; // Increment progress (1/50) 50 enemies needed to win
     void Start()
@@ -27,12 +29,15 @@ public class GameManager : MonoBehaviour
         {
             gm = this; // Inicialise the game manager instance
         }
-        // Hide pause, game over and victory panels
+        // Hide help, pause, game over and victory panels
         gameOverPanel.SetActive(gameover);
         gameVictoryPanel.SetActive(win);
         pausePanel.SetActive(paused);
+        helpPanel.SetActive(help);
         // Set progress bar fill to empty
         progressFill.fillAmount = progress;
+        // Show game help at the start of the game
+        ShowHelp();
     }
 
     void Update()
@@ -101,23 +106,43 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    
+
     public void PauseGame()
     {
-        if (paused)
+        if (!help & !win & !gameover)
         {
-            Time.timeScale = 1;
-            paused = false;
-            pausePanel.SetActive(paused);
+            if (paused)
+            {
+                Time.timeScale = 1;
+                paused = false;
+                pausePanel.SetActive(paused);
+            }
+            else
+            {
+                Time.timeScale = 0;
+                paused = true;
+                pausePanel.SetActive(paused);
+            }
         }
-        else
+    }
+    
+    public void ShowHelp()
+    {
+        if (!paused & !win & !gameover)
         {
-            Time.timeScale = 0;
-            paused = true;
-            pausePanel.SetActive(paused);
-
+            if (help)
+            {
+                Time.timeScale = 1;
+                help = false;
+                helpPanel.SetActive(help);
+            }
+            else
+            {
+                Time.timeScale = 0;
+                help = true;
+                helpPanel.SetActive(help);
+            }
         }
-
     }
 
 }
