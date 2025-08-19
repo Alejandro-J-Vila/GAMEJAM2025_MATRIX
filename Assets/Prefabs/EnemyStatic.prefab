@@ -121,9 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c4d5d253941974598ee8427277e31c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSoundID: 
-  deathSoundID: Enemy_Death
-  projectile: {fileID: 2596818545052739984, guid: 3c1dce00dd4577f44af8ed4501586e07, type: 3}
+  attackSoundID: Enemy_Attack
+  deathSoundID: StaticE_Death
+  projectile: {fileID: 2908237763213365620, guid: 3c1dce00dd4577f44af8ed4501586e07, type: 3}
   projectileSpawn: {fileID: 8291168504415276676}
   fireRate: 3
 --- !u!1 &5146850252539032232

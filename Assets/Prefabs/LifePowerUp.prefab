@@ -177,4 +177,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpType: life
   rotationSpeed: 90
-  powerUpPickUpSoundID: LifePowerUp_PickUp
+  powerUpPickUpSoundID: LifePU_PickUp

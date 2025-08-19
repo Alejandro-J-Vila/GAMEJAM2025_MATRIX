@@ -6,6 +6,8 @@ public class PlayerController2D : MonoBehaviour
     public bool canMoveDiagonally = true; // Controls whether the player can move diagonally
     public GameObject projectilePrefab; // Prefab of the player projectiles
     public GameObject projectileSpawn; // Spawn point for player projectiles
+    public string shootSoundID; // Id of the shooting sound
+    public string damageSoundID; // Id of the damage sound
     private Rigidbody2D rb; // Rigidbody2D component of the player
     private Vector2 movement; // Direction of player movement
     private bool isMovingHorizontally = true; // Flag to track if the player is moving horizontally
@@ -82,7 +84,6 @@ public class PlayerController2D : MonoBehaviour
 
     void ManageShooting()
     {
-        Vector2 shootDirection = Vector2.zero;
         // If the player hits any of the fire buttons (arrow keys), shoot in that direction
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -110,6 +111,8 @@ public class PlayerController2D : MonoBehaviour
         GameObject proj = Instantiate(projectilePrefab, projectileSpawn.transform.position, projectileSpawn.transform.rotation);
         // Set the projectile direction
         proj.GetComponent<PlayerProjectile>().SetDirection(direction);
+        // Play shooting sound
+        SoundManager.sm.PlaySound(shootSoundID);
     }
 
     void RotateProjectileSpawn(float x, float y)

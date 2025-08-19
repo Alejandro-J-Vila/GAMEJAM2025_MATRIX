@@ -20,7 +20,7 @@ public class EnemyProjectile : MonoBehaviour
         // Get the angle in which the projectile has to turn to face the target
         float projectileRotation = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
         // Rotate the projectile to face the target
-        transform.rotation = Quaternion.Euler(0, 0, projectileRotation + 90);
+        transform.rotation = Quaternion.Euler(0, 0, projectileRotation);
         // Destroy the projectile after it's lifetime has passed
         Destroy(gameObject, lifetime);
     }
@@ -30,6 +30,8 @@ public class EnemyProjectile : MonoBehaviour
         // If the projectile collides with the player
         if (collision.CompareTag("Player"))
         {
+            // Play player damage sound
+            SoundManager.sm.PlaySound(collision.gameObject.GetComponent<PlayerController2D>().damageSoundID);
             // Damages him
             GameManager.gm.DamagePlayer();
             // Destroy proyectile

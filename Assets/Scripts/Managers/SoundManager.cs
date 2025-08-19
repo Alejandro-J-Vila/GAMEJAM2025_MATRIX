@@ -34,15 +34,20 @@ public class SoundManager : MonoBehaviour
             // Add all music names maped to the corresponding index in the list
             { "Main_Menu", 0 },
             { "Level_One", 1 },
-            { "Game_Over", 2 }
+            { "Victory", 2 },
+            { "Game_Over", 3 }
         };
         // Create the sound map
         soundMap = new Dictionary<string, int>
         {
             // Add all sound names maped to the corresponding index in the list
-            { "Kamikaze_Hit", 0 },
-            { "Enemy_Death", 1 },
-            { "LifePowerUp_PickUp", 2 }
+            { "Player_Attack_S", 0 },
+            { "Player_Attack_L", 1 },
+            { "Player_Attack_E", 2 },
+            { "LifePU_PickUp", 3 },
+            { "Enemy_Attack", 4 },
+            { "KamikazeE_Death", 5 },
+            { "StaticE_Death", 6 }
         };
         soundsAudioSource = GameObject.FindWithTag("SoundPlayer").GetComponent<AudioSource>();
         musicAudioSource = GameObject.FindWithTag("MusicPlayer").GetComponent<AudioSource>();
@@ -50,15 +55,6 @@ public class SoundManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         // Subscribe to the scene loaded event to configure music when different scenes are loaded
         SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void Start()
-    {
-        // If the current scene is the settings scene or the game scene (where the toggles exist)
-        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
-        {
-
-        }
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)

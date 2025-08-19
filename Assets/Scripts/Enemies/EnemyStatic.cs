@@ -60,6 +60,6 @@ public class EnemyStatic : Enemy
         // Create projectile in the spawn point to fire it
         Instantiate(projectile, projectileSpawn.transform.position, projectileSpawn.transform.rotation);
         // Play attack sound
-        //SoundManager.sm.PlaySound(attackSoundID);
+        SoundManager.sm.PlaySound(attackSoundID);
     }
 }

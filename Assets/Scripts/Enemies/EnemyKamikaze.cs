@@ -56,9 +56,7 @@ public class EnemyKamikaze : Enemy
         {
             // Damages the player
             GameManager.gm.DamagePlayer();
-            // Add progress
-            GameManager.gm.AddProgress();
-            // Play the sound of the enemy death
+            // Play the sound of the enemy attack
             SoundManager.sm.PlaySound(attackSoundID);
             // Destroy enemy
             Destroy(gameObject);

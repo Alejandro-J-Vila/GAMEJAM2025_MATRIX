@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             // Display game over panel
             gameOverPanel.SetActive(gameover);
+            // Play game over music
             SoundManager.sm.PlayMusic("Game_Over");
         }
     }
@@ -86,6 +87,8 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             // Display victory panel
             gameVictoryPanel.SetActive(win);
+            // Play victory music
+            SoundManager.sm.PlayMusic("Victory");
         }
     }
 
