@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      main_nenu_screen_0: -5518266163409251042
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

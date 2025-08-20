@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fondo_provisorio_ejemplo_de_armado_0: -484159398602619993
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

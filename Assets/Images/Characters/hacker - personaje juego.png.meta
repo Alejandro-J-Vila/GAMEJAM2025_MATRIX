@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hacker - personaje juego_0: 6269681928053636386
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
