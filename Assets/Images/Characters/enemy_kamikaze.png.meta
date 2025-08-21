@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: 8314488272523172643
     second: enemy_kamikaze_0
+  - first:
+      213: -7881939128382938363
+    second: enemy_kamikaze_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,10 +119,10 @@ TextureImporter:
       name: enemy_kamikaze_0
       rect:
         serializedVersion: 2
-        x: 46
-        y: 67
-        width: 568
-        height: 476
+        x: 13
+        y: 0
+        width: 488
+        height: 394
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,6 +133,28 @@ TextureImporter:
       bones: []
       spriteID: 32b15e4280ff26370800000000000000
       internalID: 8314488272523172643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_kamikaze_1
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 503ab7f7f1abd9290800000000000000
+      internalID: -7881939128382938363
       vertices: []
       indices: 
       edges: []
@@ -147,8 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      enemy_kamikaze_0: 8314488272523172643
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

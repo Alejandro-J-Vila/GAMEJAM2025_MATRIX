@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a89ba2b80c4ca6d45a405f94e772254d
+guid: fc739c198ce962a49ac90ceecd636c45
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7927517799640306292
-    second: help_panel_0
+      213: 8346901879194642381
+    second: button_pressed_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: help_panel_0
+      name: button_pressed_0
       rect:
         serializedVersion: 2
-        x: 128
-        y: 52
-        width: 837
-        height: 963
+        x: 239
+        y: 62
+        width: 1429
+        height: 210
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 86, y: 87, z: 95, w: 71}
+      border: {x: 94, y: 112, z: 107, w: 87}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fa1bfcd065dfdbf41b1f2aadc77380f8
-      internalID: 320347132
+      spriteID: dc7ef6c090726d370800000000000000
+      internalID: 8346901879194642381
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 08c51ecf9036ebe40bf17a6977064626
+    spriteID: ddf80eb2744d6034f838424d92df9cae
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      help_panel_0: 320347132
+      button_pressed_0: 8346901879194642381
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

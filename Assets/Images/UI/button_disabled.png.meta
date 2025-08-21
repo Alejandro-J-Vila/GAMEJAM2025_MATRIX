@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: ff96ab86e54c4e74884b6321aaa5779f
+guid: ee5d4aeffa0836540b0a4b5e82a6363f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6886708433596245075
-    second: enemy_static_0
-  - first:
-      213: 8803129260553752278
-    second: enemy_static_1
+      213: -5836713271973203417
+    second: button_disabled_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,45 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_static_0
+      name: button_disabled_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 16
-        width: 412
-        height: 603
+        x: 239
+        y: 62
+        width: 1429
+        height: 210
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 92, y: 108, z: 108, w: 91}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 354e03045d0829f50800000000000000
-      internalID: 6886708433596245075
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_static_1
-      rect:
-        serializedVersion: 2
-        x: 92
-        y: 16
-        width: 318
-        height: 67
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6de4727eb6ffa2a70800000000000000
-      internalID: 8803129260553752278
+      spriteID: 722ba301434dffea0800000000000000
+      internalID: -5836713271973203417
       vertices: []
       indices: 
       edges: []
@@ -163,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 437993c4b650eed41924c71ee9b0ff38
+    spriteID: 63c2e137db351ba4a8352cb38ab3a3ec
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      enemy_static_0: 6886708433596245075
-      enemy_static_1: 8803129260553752278
+      button_disabled_0: -5836713271973203417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

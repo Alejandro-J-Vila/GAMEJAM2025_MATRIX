@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1c975b0ecf9d450458d3864b3cec3cea
+guid: 3926410d061d5c04480509ba82866796
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -484159398602619993
-    second: fondo_provisorio_ejemplo_de_armado_0
+      213: 8101404082875582134
+    second: pc_screen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fondo_provisorio_ejemplo_de_armado_0
+      name: pc_screen_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1141
-        height: 804
+        x: 112
+        y: 183
+        width: 1696
+        height: 815
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a3cf97979be749f0800000000000000
-      internalID: -484159398602619993
+      spriteID: 6b6c2bd1718fd6070800000000000000
+      internalID: 8101404082875582134
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      fondo_provisorio_ejemplo_de_armado_0: -484159398602619993
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

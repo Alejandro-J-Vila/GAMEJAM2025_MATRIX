@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: ff96ab86e54c4e74884b6321aaa5779f
+guid: 25310e0c3bc487842b03863818caec2e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6886708433596245075
-    second: enemy_static_0
+      213: 4937727940964124961
+    second: kamikaze_enemy_spritesheet_0
   - first:
-      213: 8803129260553752278
-    second: enemy_static_1
+      213: 5145638507256760404
+    second: kamikaze_enemy_spritesheet_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,45 +116,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_static_0
+      name: kamikaze_enemy_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 16
-        width: 412
-        height: 603
+        x: 11
+        y: 10
+        width: 195
+        height: 165
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 354e03045d0829f50800000000000000
-      internalID: 6886708433596245075
+      spriteID: 12900bea665568440800000000000000
+      internalID: 4937727940964124961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_static_1
+      name: kamikaze_enemy_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 92
-        y: 16
-        width: 318
-        height: 67
+        x: 225
+        y: 18
+        width: 201
+        height: 163
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6de4727eb6ffa2a70800000000000000
-      internalID: 8803129260553752278
+      spriteID: 4584c97a5faf86740800000000000000
+      internalID: 5145638507256760404
       vertices: []
       indices: 
       edges: []
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 437993c4b650eed41924c71ee9b0ff38
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -172,9 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      enemy_static_0: 6886708433596245075
-      enemy_static_1: 8803129260553752278
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

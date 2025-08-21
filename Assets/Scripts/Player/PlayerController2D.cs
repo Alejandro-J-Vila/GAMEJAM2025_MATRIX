@@ -8,6 +8,9 @@ public class PlayerController2D : MonoBehaviour
     public GameObject projectileSpawn; // Spawn point for player projectiles
     public string shootSoundID; // Id of the shooting sound
     public string damageSoundID; // Id of the damage sound
+    public Sprite frontSprite; // Reference to the front sprite
+    public Sprite backSprite; // Reference to the back sprite
+    private SpriteRenderer sr; // Sprite renderer used to display the sprites
     private Rigidbody2D rb; // Rigidbody2D component of the player
     private Vector2 movement; // Direction of player movement
     private bool isMovingHorizontally = true; // Flag to track if the player is moving horizontally
@@ -18,6 +21,8 @@ public class PlayerController2D : MonoBehaviour
     {
         // Initialize the Rigidbody2D component
         rb = GetComponent<Rigidbody2D>();
+        // Initialize the sprite renderer component
+        sr = GetComponentInChildren<SpriteRenderer>();
         // Prevent the player from rotating continuosly
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
@@ -53,6 +58,17 @@ public class PlayerController2D : MonoBehaviour
         // Get player input from keyboard or controller
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
+        // If player is moving up
+        if (verticalInput > 0)
+        {
+            // Change the sprite to the back
+            sr.sprite = backSprite;
+        }
+        else
+        {
+            // If the player is moving down, change the sprite to the front
+            sr.sprite = frontSprite;
+        }
         // Check if diagonal movement is allowed
         if (canMoveDiagonally)
         {

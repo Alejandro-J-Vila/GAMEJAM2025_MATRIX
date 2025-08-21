@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 468920ff4dad44340a53a1717142e6cb
+guid: e97179d9e6b3772448982cdde037a55f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7031405257229836016
-    second: cd_attack_0
+      213: 7767156198091485997
+    second: hacker_front_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cd_attack_0
+      name: hacker_front_0
       rect:
         serializedVersion: 2
-        x: 90
-        y: 90
-        width: 900
-        height: 900
+        x: 0
+        y: 0
+        width: 559
+        height: 792
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0fe9ff4d3d1949160800000000000000
-      internalID: 7031405257229836016
+      spriteID: d237736f86b7acb60800000000000000
+      internalID: 7767156198091485997
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      cd_attack_0: 7031405257229836016
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
