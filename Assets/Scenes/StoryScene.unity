@@ -930,7 +930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4f30a6a4cc8734c8660f476c8d6ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 40
+  scrollSpeed: 60
   panelType: story
 --- !u!1 &992323747
 GameObject:

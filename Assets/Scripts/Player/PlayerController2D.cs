@@ -14,7 +14,8 @@ public class PlayerController2D : MonoBehaviour
     private Rigidbody2D rb; // Rigidbody2D component of the player
     private Vector2 movement; // Direction of player movement
     private bool isMovingHorizontally = true; // Flag to track if the player is moving horizontally
-    private float verticalLimit = 4.5f; // Screen vertical limit for the player
+    private float topLimit = 3f; // Screen top limit for the player
+    private float botLimit = -4.5f; // Screen bottom limit for the player
     private float horizontalLimit = 8.4f; // Screen horizontal limit for the player
 
     void Start()
@@ -156,13 +157,13 @@ public class PlayerController2D : MonoBehaviour
             transform.position = new Vector2(horizontalLimit, transform.position.y);
         }
         // If the player reach the top or bottom boundaries of the screen, stop him
-        if(transform.position.y > verticalLimit)
+        if(transform.position.y > topLimit)
         {
-            transform.position = new Vector2(transform.position.x, verticalLimit);
+            transform.position = new Vector2(transform.position.x, topLimit);
         }
-        if(transform.position.y < -verticalLimit)
+        if(transform.position.y < botLimit)
         {
-            transform.position = new Vector2(transform.position.x, -verticalLimit);
+            transform.position = new Vector2(transform.position.x, botLimit);
         }
     }
 }
