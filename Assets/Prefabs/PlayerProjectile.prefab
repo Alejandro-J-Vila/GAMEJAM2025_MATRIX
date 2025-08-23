@@ -176,3 +176,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  particlePrefab: {fileID: 4014523975366452353, guid: 78a05d0de48e1d845961a0d3dd8918f1, type: 3}
