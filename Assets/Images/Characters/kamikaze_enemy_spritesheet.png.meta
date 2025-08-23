@@ -119,20 +119,20 @@ TextureImporter:
       name: kamikaze_enemy_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 10
-        width: 195
-        height: 165
+        x: 12
+        y: 13
+        width: 192
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 12900bea665568440800000000000000
-      internalID: 4937727940964124961
+      spriteID: d130ae5e2edeee94d9ebc55e032facc8
+      internalID: 19976554
       vertices: []
       indices: 
       edges: []
@@ -141,20 +141,20 @@ TextureImporter:
       name: kamikaze_enemy_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 225
-        y: 18
-        width: 201
-        height: 163
+        x: 227
+        y: 32
+        width: 197
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4584c97a5faf86740800000000000000
-      internalID: 5145638507256760404
+      spriteID: 1fd25c9940cd52b4a814c5f2cd3dd1e7
+      internalID: 2020139775
       vertices: []
       indices: 
       edges: []
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4749cd07399340349b1902583999a027
     internalID: 0
     vertices: []
     indices: 
@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kamikaze_enemy_spritesheet_0: 19976554
+      kamikaze_enemy_spritesheet_1: 2020139775
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

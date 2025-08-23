@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 10c24b14700e7e8499cdf8652d1bb0c0
+guid: df15d7f431f625b48a7e328c376536ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6269681928053636386
-    second: hacker - personaje juego_0
+      213: -3927598676920850030
+    second: player_projectile_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hacker - personaje juego_0
+      name: player_projectile_2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 421
-        height: 626
+        width: 128
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22db250de72620750800000000000000
-      internalID: 6269681928053636386
+      spriteID: 299a6d900dd5e79c0800000000000000
+      internalID: -3927598676920850030
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hacker - personaje juego_0: 6269681928053636386
+      player_projectile_2_0: -3927598676920850030
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

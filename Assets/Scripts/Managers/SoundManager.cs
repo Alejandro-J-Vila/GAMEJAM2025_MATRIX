@@ -35,7 +35,8 @@ public class SoundManager : MonoBehaviour
             { "Main_Menu", 0 },
             { "Level_One", 1 },
             { "Victory", 2 },
-            { "Game_Over", 3 }
+            { "Game_Over", 3 },
+            { "Story", 4 }
         };
         // Create the sound map
         soundMap = new Dictionary<string, int>
@@ -47,7 +48,8 @@ public class SoundManager : MonoBehaviour
             { "LifePU_PickUp", 3 },
             { "Enemy_Attack", 4 },
             { "KamikazeE_Death", 5 },
-            { "StaticE_Death", 6 }
+            { "StaticE_Death", 6 },
+            { "StaticE_Spawn", 7 }
         };
         soundsAudioSource = GameObject.FindWithTag("SoundPlayer").GetComponent<AudioSource>();
         musicAudioSource = GameObject.FindWithTag("MusicPlayer").GetComponent<AudioSource>();
@@ -62,18 +64,8 @@ public class SoundManager : MonoBehaviour
         // If the scene loaded is the main menu
         if (scene.name == "MainMenuScene")
         {
-            // If music is on
-            if (musicOn)
-            {
-                // Stop the current music clip
-                musicAudioSource.Stop();
-                // Select the main menu clip
-                musicAudioSource.clip = musicList[musicMap["Main_Menu"]];
-                // Activate clip loop
-                musicAudioSource.loop = true;
-                // Play the music clip
-                musicAudioSource.Play();
-            }
+            // Play the main menu music
+            PlaySceneMusic("Main_Menu");
         }
         // If the scene loaded is the settings
         if (scene.name == "SettingsScene")
@@ -84,20 +76,44 @@ public class SoundManager : MonoBehaviour
         // If the scene loaded is the level
         if (scene.name == "LevelOneScene")
         {
-            // If music is on
-            if (musicOn)
-            {
-                // Stop the current music clip
-                musicAudioSource.Stop();
-                // Select the level clip
-                musicAudioSource.clip = musicList[musicMap["Level_One"]];
-                // Activate clip loop
-                musicAudioSource.loop = true;
-                // Play the music clip
-                musicAudioSource.Play();
-            }
+            // Play the level music
+            PlaySceneMusic("Level_One");
             // Set the sound and music toggles from the pause panel
             SetToggles();
+        }
+        // If the scene loaded is the victory scene
+        if (scene.name == "VictoryScene")
+        {
+            // Play the victory screen music
+            PlaySceneMusic("Victory");
+        }
+        // If the scene loaded is the defeat scene
+        if (scene.name == "DefeatScene")
+        {
+            // Play the defeat screen music
+            PlaySceneMusic("Game_Over");
+        }
+        // If the scene loaded is the story scene
+        if (scene.name == "StoryScene")
+        {
+            // Play the story music
+            PlaySceneMusic("Story");
+        }
+    }
+
+    private void PlaySceneMusic(string musicKey)
+    {
+        // If music is on
+        if (musicOn)
+        {
+            // Stop the current music clip
+            musicAudioSource.Stop();
+            // Select the music clip
+            musicAudioSource.clip = musicList[musicMap[musicKey]];
+            // Activate clip loop
+            musicAudioSource.loop = true;
+            // Play the music clip
+            musicAudioSource.Play();
         }
     }
 

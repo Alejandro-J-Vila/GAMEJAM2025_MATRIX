@@ -1,23 +1,77 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CreditsRoll : MonoBehaviour
 {
     public float scrollSpeed = 120f; // Rolling credits speed
-    private RectTransform creditsPanel; // Credits panel that is going to scroll
+    public string panelType; // Type of panel that is going to scroll
+    private RectTransform rollingPanel; // Credits panel that is going to scroll
     void Start()
     {
         // Get the reference to the scrolling panel
-        creditsPanel = GetComponent<RectTransform>();
+        rollingPanel = GetComponent<RectTransform>();
     }
 
     void FixedUpdate()
     {
-        // Move the panel up
-        creditsPanel.anchoredPosition += new Vector2(0, scrollSpeed * Time.deltaTime);
-        // When the panel reach the final position, reset it to the initial position
-        if (creditsPanel.anchoredPosition.y >= 2859)
+        if (panelType == "credits")
         {
-            creditsPanel.anchoredPosition -= new Vector2(0, 3916);
+            RollCredits();
+        }
+        if (panelType == "victory")
+        {
+            RollVictory();
+        }
+        if (panelType == "defeat")
+        {
+            RollDefeat();
+        }
+        if (panelType == "story")
+        {
+            RollStory();
+        }
+
+    }
+
+    private void RollCredits()
+    {
+        // Move the panel up
+        rollingPanel.anchoredPosition += new Vector2(0, scrollSpeed * Time.deltaTime);
+        // When the panel reach the final position, reset it to the initial position
+        if (rollingPanel.anchoredPosition.y >= 4080)
+        {
+            rollingPanel.anchoredPosition -= new Vector2(0, 4941);
+        }
+    }
+
+    private void RollStory()
+    {
+        // Move the panel up
+        rollingPanel.anchoredPosition += new Vector2(0, scrollSpeed * Time.deltaTime);
+        // When the panel reach the final position, load the game scene
+        if (rollingPanel.anchoredPosition.y >= 2580)
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
+
+    private void RollVictory()
+    {
+        // When the panel reach the final position, stop moving
+        if (rollingPanel.anchoredPosition.y < 77)
+        {
+            // Move the panel up
+            rollingPanel.anchoredPosition += new Vector2(0, scrollSpeed * Time.deltaTime);
+        }
+    }
+    
+    private void RollDefeat()
+    {
+        // When the panel reach the final position, stop moving
+        if (rollingPanel.anchoredPosition.y < 116)
+        {
+            // Move the panel up
+            rollingPanel.anchoredPosition += new Vector2(0, scrollSpeed * Time.deltaTime);
         }
     }
 }

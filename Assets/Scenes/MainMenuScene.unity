@@ -1512,7 +1512,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1947,16 +1947,18 @@ MonoBehaviour:
   musicList:
   - {fileID: 8300000, guid: 18eae0734b3bd514988dcac58aa54a2b, type: 3}
   - {fileID: 8300000, guid: c4d3fb2650c274f42b79c80486c955c5, type: 3}
-  - {fileID: 8300000, guid: d07ee4636d350ea45a49b978ca1c999b, type: 3}
+  - {fileID: 8300000, guid: 4cb8c7d4e7df1034aadfd63614581bc6, type: 3}
   - {fileID: 8300000, guid: d3e423c2a3f49fd41bc57a898ae474d8, type: 3}
+  - {fileID: 8300000, guid: 7034698ef1a36d44f8574d069cabd91a, type: 3}
   soundList:
   - {fileID: 8300000, guid: a960f7b091afaa1449c65ae8abe209e8, type: 3}
   - {fileID: 8300000, guid: c7035718f6b21f9448e7a295690541e5, type: 3}
   - {fileID: 8300000, guid: 6126509548bdbc04c9c2512c1e326cf4, type: 3}
-  - {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
+  - {fileID: 8300000, guid: 76f275e465fa1c943b08d5d0c0e5ffd7, type: 3}
   - {fileID: 8300000, guid: 825aab712a867b049af8435000152cc5, type: 3}
   - {fileID: 8300000, guid: 2fa7f1d1dc1ce1e4f88a88b7f353197c, type: 3}
   - {fileID: 8300000, guid: 564eb16df49aae143b14b9ff0d13ce1e, type: 3}
+  - {fileID: 8300000, guid: 6818acb0f5a9fcf44bc49bf7553d5806, type: 3}
 --- !u!4 &1799733385
 Transform:
   m_ObjectHideFlags: 0

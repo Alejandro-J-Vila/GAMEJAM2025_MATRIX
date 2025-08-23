@@ -64,6 +64,8 @@ public class SpawnManager : MonoBehaviour
         // Variables for position and rotation of the spawned enemy
         Vector2 spawnPos = new Vector2(Random.Range(-8, 8), Random.Range(-3, 3));
         Quaternion spawnRot = staticSpawn.transform.rotation;
+        // Play enemy spawn sound
+        SoundManager.sm.PlaySound("StaticE_Spawn");
         // Spawn the enemy
         Instantiate(enemyStatic, spawnPos, spawnRot);
     }

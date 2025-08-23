@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - SoundToggle
   - MusicToggle
+  - Skip
   layers:
   - Default
   - TransparentFX

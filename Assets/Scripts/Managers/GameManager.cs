@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -9,12 +10,8 @@ public class GameManager : MonoBehaviour
     public int playerLives = 5; // Player lives count
     public GameObject[] lives; // Player lives references
     public Image progressFill; // Progress bar fill image
-    public GameObject gameOverPanel; // Game over panel
-    public GameObject gameVictoryPanel; // Game victory panel
     public GameObject pausePanel; // Game pause panel
     public GameObject helpPanel; // Help panel
-    private bool gameover = false; // Game over flag
-    private bool win = false; // Game victory flag
     private bool paused = false; // Paused game flag
     private bool help = false; // Help flag
     private float progress = 0f; // Amount of progress
@@ -29,9 +26,7 @@ public class GameManager : MonoBehaviour
         {
             gm = this; // Inicialise the game manager instance
         }
-        // Hide help, pause, game over and victory panels
-        gameOverPanel.SetActive(gameover);
-        gameVictoryPanel.SetActive(win);
+        // Hide help and pause panels
         pausePanel.SetActive(paused);
         helpPanel.SetActive(help);
         // Set progress bar fill to empty
@@ -59,13 +54,7 @@ public class GameManager : MonoBehaviour
         else
         {
             // If the player have no lives left, game over
-            gameover = true;
-            // Pause the game
-            Time.timeScale = 0;
-            // Display game over panel
-            gameOverPanel.SetActive(gameover);
-            // Play game over music
-            SoundManager.sm.PlayMusic("Game_Over");
+            SceneManager.LoadScene(7);
         }
     }
 
@@ -82,13 +71,7 @@ public class GameManager : MonoBehaviour
         else
         {
             // If progress is complete, victory
-            win = true;
-            // Pause the game
-            Time.timeScale = 0;
-            // Display victory panel
-            gameVictoryPanel.SetActive(win);
-            // Play victory music
-            SoundManager.sm.PlayMusic("Victory");
+            SceneManager.LoadScene(6);
         }
     }
 
@@ -112,7 +95,7 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
-        if (!help & !win & !gameover)
+        if (!help)
         {
             if (paused)
             {
@@ -131,7 +114,7 @@ public class GameManager : MonoBehaviour
     
     public void ShowHelp()
     {
-        if (!paused & !win & !gameover)
+        if (!paused)
         {
             if (help)
             {
