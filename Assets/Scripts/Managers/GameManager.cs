@@ -15,7 +15,8 @@ public class GameManager : MonoBehaviour
     private bool paused = false; // Paused game flag
     private bool help = false; // Help flag
     private float progress = 0f; // Amount of progress
-    private float progressIncrement = 0.02f; // Increment progress (1/50) 50 enemies needed to win
+    private int killedEnemiesCount = 0;
+    private float progressIncrement = 0.005f; // Increment progress (1/200) 200 enemies needed to win
     void Start()
     {
         if (gm != null && gm != this)
@@ -65,6 +66,7 @@ public class GameManager : MonoBehaviour
         {
             // Add progress
             progress += progressIncrement;
+            killedEnemiesCount++;
             // Update progress bar fill
             progressFill.fillAmount = progress;
         }
@@ -111,7 +113,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    
+
     public void ShowHelp()
     {
         if (!paused)
@@ -129,6 +131,11 @@ public class GameManager : MonoBehaviour
                 helpPanel.SetActive(help);
             }
         }
+    }
+
+    public int KilledEnemiesCount()
+    {
+        return killedEnemiesCount;
     }
 
 }

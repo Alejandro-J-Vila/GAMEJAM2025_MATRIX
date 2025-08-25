@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
@@ -14,6 +15,8 @@ public class SpawnManager : MonoBehaviour
     private float enemySpawnInterval = 2f; // Enemy spawn cooldown
     private int powerUpMaxCount = 5; // Max quantity of powerups in scene
     private int powerUpCount = 0; // Current quantity of power ups in scene
+    private int killedEnemies = 0;
+    private int difficulty = 1;
     void Start()
     {
         if (sm != null && sm != this)
@@ -25,13 +28,16 @@ public class SpawnManager : MonoBehaviour
             sm = this; // Inicialise the spawn manager instance
         }
         // Continuosly spawn enemies
-        InvokeRepeating("SpawnEnemyKamikaze", enemySpawnStartDelay, enemySpawnInterval);
-        InvokeRepeating("SpawnEnemyStatic", 10f, 4f);
+        //InvokeRepeating("SpawnEnemyKamikaze", enemySpawnStartDelay, enemySpawnInterval);
+        //InvokeRepeating("SpawnEnemyStatic", 10f, 4f);
+        InvokeRepeating("SpawnEnemyKamikazeX", enemySpawnStartDelay, enemySpawnInterval);
+        InvokeRepeating("SpawnEnemyStaticX", 10f, 4f);
     }
 
     void Update()
     {
-
+        killedEnemies = GameManager.gm.KilledEnemiesCount();
+        DifficultyIncrease();
     }
 
     void SpawnEnemyKamikaze()
@@ -91,6 +97,68 @@ public class SpawnManager : MonoBehaviour
         if (powerUpCount > 0)
         {
             powerUpCount--;
+        }
+    }
+
+    private void DifficultyIncrease()
+    {
+        if (killedEnemies >= 0 & killedEnemies < 20)
+        {
+            difficulty = 1;
+        }
+        if (killedEnemies >= 20 & killedEnemies < 60)
+        {
+            difficulty = 2;
+        }
+        if (killedEnemies >= 60 & killedEnemies < 120)
+        {
+            difficulty = 3;
+        }
+        if (killedEnemies >= 120)
+        {
+            difficulty = 4;
+        }
+    }
+
+    private void SpawnEnemyKamikazeX()
+    {
+        for (int i = 0; i < difficulty; i++)
+        {
+            // Select a random spawn point
+            int spawnIndex = Random.Range(0, enemySpawnPoints.Length);
+            // Variables for position and rotation of the spawned enemy
+            Vector2 spawnPos = new Vector2();
+            Quaternion spawnRot = enemySpawnPoints[spawnIndex].transform.rotation;
+            // If the spawn point selected is a vertical one
+            if (enemySpawnPoints[spawnIndex].CompareTag("VerticalSpawn"))
+            {
+                // Calculate the enemy position within the horizontal range
+                spawnPos = new Vector2(Random.Range(-horizontalEnemySpawnRange, horizontalEnemySpawnRange), enemySpawnPoints[spawnIndex].transform.position.y);
+            }
+            // If the spawn point is a horizontal one
+            else if (enemySpawnPoints[spawnIndex].CompareTag("HorizontalSpawn"))
+            {
+                // Calculate the enemy position within the vertical range
+                spawnPos = new Vector2(enemySpawnPoints[spawnIndex].transform.position.x, Random.Range(-verticalEnemySpawnRange, verticalEnemySpawnRange));
+            }
+            // Spawn the enemy
+            Instantiate(enemyKamikaze, spawnPos, spawnRot);
+        }
+    }
+
+    private void SpawnEnemyStaticX()
+    {
+        for (int i = 0; i < difficulty; i++)
+        {
+            // Select a random spawn point
+            int spawnIndex = Random.Range(0, enemySpawnPoints.Length);
+            // Variables for position and rotation of the spawned enemy
+            Vector2 spawnPos = new Vector2(Random.Range(-8, 8), Random.Range(-3, 3));
+            Quaternion spawnRot = staticSpawn.transform.rotation;
+            // Play enemy spawn sound
+            SoundManager.sm.PlaySound("StaticE_Spawn");
+            // Spawn the enemy
+            Instantiate(enemyStatic, spawnPos, spawnRot);
         }
     }
 }

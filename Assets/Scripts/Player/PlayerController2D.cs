@@ -17,6 +17,8 @@ public class PlayerController2D : MonoBehaviour
     private float topLimit = 3f; // Screen top limit for the player
     private float botLimit = -4.5f; // Screen bottom limit for the player
     private float horizontalLimit = 8.4f; // Screen horizontal limit for the player
+    private float timeToFire = 0;
+    private float fireCooldown = 0.1f;
 
     void Start()
     {
@@ -101,6 +103,12 @@ public class PlayerController2D : MonoBehaviour
 
     void ManageShooting()
     {
+        // If the player fired recently
+        if (timeToFire > 0)
+        {
+            // Decrease the time to fire in seconds with passing time
+            timeToFire -= Time.deltaTime;
+        }
         // If the player hits any of the fire buttons (arrow keys), shoot in that direction
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -122,14 +130,19 @@ public class PlayerController2D : MonoBehaviour
 
     void Shoot(Vector2 direction)
     {
-        // Rotate the projectile spawn in the shooting direction
-        RotateProjectileSpawn(direction.x, direction.y);
-        // Create the projectile to shoot
-        GameObject proj = Instantiate(projectilePrefab, projectileSpawn.transform.position, projectileSpawn.transform.rotation);
-        // Set the projectile direction
-        proj.GetComponent<PlayerProjectile>().SetDirection(direction);
-        // Play shooting sound
-        SoundManager.sm.PlaySound(shootSoundID);
+        if (timeToFire <= 0)
+        {
+            // Rotate the projectile spawn in the shooting direction
+            RotateProjectileSpawn(direction.x, direction.y);
+            // Create the projectile to shoot
+            GameObject proj = Instantiate(projectilePrefab, projectileSpawn.transform.position, projectileSpawn.transform.rotation);
+            // Set the projectile direction
+            proj.GetComponent<PlayerProjectile>().SetDirection(direction);
+            // Play shooting sound
+            SoundManager.sm.PlaySound(shootSoundID);
+            // Shoot cooldown
+            timeToFire = fireCooldown;
+        }
     }
 
     void RotateProjectileSpawn(float x, float y)
