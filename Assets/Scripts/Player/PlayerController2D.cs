@@ -17,8 +17,8 @@ public class PlayerController2D : MonoBehaviour
     private float topLimit = 3f; // Screen top limit for the player
     private float botLimit = -4.5f; // Screen bottom limit for the player
     private float horizontalLimit = 8.4f; // Screen horizontal limit for the player
-    private float timeToFire = 0;
-    private float fireCooldown = 0.1f;
+    private float timeToFire = 0; // Checks if the player can fire
+    private float fireCooldown = 0.1f; // Player fire cooldown
 
     void Start()
     {
@@ -41,11 +41,13 @@ public class PlayerController2D : MonoBehaviour
         // If the player hits the pause button
         if (Input.GetKeyDown(KeyCode.P))
         {
+            // Show/hide pause panel
             GameManager.gm.PauseGame();
         }
         // If the player hits the help button
         if (Input.GetKeyDown(KeyCode.H))
         {
+            // Show/hide help panel
             GameManager.gm.ShowHelp();
         }
     }
@@ -130,6 +132,7 @@ public class PlayerController2D : MonoBehaviour
 
     void Shoot(Vector2 direction)
     {
+        // If fire cooldown is off
         if (timeToFire <= 0)
         {
             // Rotate the projectile spawn in the shooting direction

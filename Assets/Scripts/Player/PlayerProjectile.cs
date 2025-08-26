@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerProjectile : MonoBehaviour
 {
     public float speed = 10; // Projectile speed
-    private float lifetime = 5; // Time until the projectile destroys itself
+    private float lifetime = 1; // Time until the projectile destroys itself
     private Vector2 movementDirection; // Projectile direction
     private Rigidbody2D rb; // Reference to the rigid body of the projectile
     public GameObject particlePrefab; //Particle prefab
@@ -41,9 +41,10 @@ public class PlayerProjectile : MonoBehaviour
             SpawnManager.sm.SpawnPowerUp(other.transform.position, Quaternion.identity);
             // Play enemy death sound
             SoundManager.sm.PlaySound(other.gameObject.GetComponent<Enemy>().deathSoundID);
-            // Play the particle
-            GameObject instantiatedParticleSystem = Instantiate(particlePrefab,other.gameObject.transform.position,other.gameObject.transform.rotation);
-            particle=instantiatedParticleSystem.GetComponent<ParticleSystem>();
+            // Create the particle effect
+            GameObject instantiatedParticleSystem = Instantiate(particlePrefab, other.gameObject.transform.position, other.gameObject.transform.rotation);
+            particle = instantiatedParticleSystem.GetComponent<ParticleSystem>();
+            // Play the particle effect
             particle.Play();
             // Destroy the projectile and the enemy
             Destroy(other.gameObject);

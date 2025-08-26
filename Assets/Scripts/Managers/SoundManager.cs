@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -13,6 +12,7 @@ public class SoundManager : MonoBehaviour
     private AudioSource musicAudioSource; // Reference to the audio source that play music in the scene
     private static bool soundOn = true; // Flag for sound on/off
     private static bool musicOn = true; // Flag for music on/off
+    private static bool inMenus = false; // Flag for not starting over the music when navigating menus
     private Dictionary<string, int> musicMap; // Dictionary that map music names to list index numbers
     private Dictionary<string, int> soundMap; // Dictionary that map sound names to list index numbers
     private TMP_Text soundToggle; // Reference to the sound toggle
@@ -51,6 +51,7 @@ public class SoundManager : MonoBehaviour
             { "StaticE_Death", 6 },
             { "StaticE_Spawn", 7 }
         };
+        // Get the audio sources for sounds and music.
         soundsAudioSource = GameObject.FindWithTag("SoundPlayer").GetComponent<AudioSource>();
         musicAudioSource = GameObject.FindWithTag("MusicPlayer").GetComponent<AudioSource>();
         // Set this to not be destroyed when reloading scene
@@ -64,8 +65,14 @@ public class SoundManager : MonoBehaviour
         // If the scene loaded is the main menu
         if (scene.name == "MainMenuScene")
         {
-            // Play the main menu music
-            PlaySceneMusic("Main_Menu");
+            // If we are not in menus
+            if (!inMenus)
+            {
+                // Set the in menus flag to true because we enter the menus coming from the game or just started the game
+                inMenus = true;
+                // Play the main menu music
+                PlaySceneMusic("Main_Menu");
+            }
         }
         // If the scene loaded is the settings
         if (scene.name == "SettingsScene")
@@ -96,6 +103,8 @@ public class SoundManager : MonoBehaviour
         // If the scene loaded is the story scene
         if (scene.name == "StoryScene")
         {
+            // Set the in menus flag to false because we are leaving the menus, and this is the only scene that leaves the menus
+            inMenus = false;
             // Play the story music
             PlaySceneMusic("Story");
         }

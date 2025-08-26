@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class CreditsRoll : MonoBehaviour
 {
-    public float scrollSpeed = 120f; // Rolling credits speed
+    public float scrollSpeed = 120f; // Rolling panel speed
     public string panelType; // Type of panel that is going to scroll
-    private RectTransform rollingPanel; // Credits panel that is going to scroll
+    private RectTransform rollingPanel; // Panel that is going to scroll
     void Start()
     {
         // Get the reference to the scrolling panel
@@ -14,6 +14,7 @@ public class CreditsRoll : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Depending on the type of panel, perform specific tasks
         if (panelType == "credits")
         {
             RollCredits();

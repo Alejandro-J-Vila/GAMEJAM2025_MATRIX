@@ -15,8 +15,9 @@ public class GameManager : MonoBehaviour
     private bool paused = false; // Paused game flag
     private bool help = false; // Help flag
     private float progress = 0f; // Amount of progress
-    private int killedEnemiesCount = 0;
+    private int killedEnemiesCount = 0; // Amount of enemies killed
     private float progressIncrement = 0.005f; // Increment progress (1/200) 200 enemies needed to win
+    
     void Start()
     {
         if (gm != null && gm != this)
@@ -34,11 +35,6 @@ public class GameManager : MonoBehaviour
         progressFill.fillAmount = progress;
         // Show game help at the start of the game
         ShowHelp();
-    }
-
-    void Update()
-    {
-
     }
 
     public void DamagePlayer()
@@ -66,6 +62,7 @@ public class GameManager : MonoBehaviour
         {
             // Add progress
             progress += progressIncrement;
+            // Increase the enemies killed
             killedEnemiesCount++;
             // Update progress bar fill
             progressFill.fillAmount = progress;
@@ -97,8 +94,10 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
+        // If the help panel is not active
         if (!help)
         {
+            // Enable/disable the pause screen also pausing/unpausing the game
             if (paused)
             {
                 Time.timeScale = 1;
@@ -116,8 +115,10 @@ public class GameManager : MonoBehaviour
 
     public void ShowHelp()
     {
+        // If the pause panel is not active
         if (!paused)
         {
+            // Enable/disable the help screen also pausing/unpausing the game
             if (help)
             {
                 Time.timeScale = 1;
@@ -135,6 +136,7 @@ public class GameManager : MonoBehaviour
 
     public int KilledEnemiesCount()
     {
+        // Get the enemies killed counter
         return killedEnemiesCount;
     }
 

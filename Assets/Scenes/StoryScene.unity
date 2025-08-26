@@ -1212,7 +1212,6 @@ GameObject:
   - component: {fileID: 1157499038}
   - component: {fileID: 1157499037}
   - component: {fileID: 1157499036}
-  - component: {fileID: 1157499039}
   m_Layer: 5
   m_Name: Skip_Button
   m_TagString: Skip
@@ -1237,8 +1236,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 872.7, y: -474.1}
-  m_SizeDelta: {x: 150, y: 100}
+  m_AnchoredPosition: {x: 841.3, y: -469.3}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1157499036
 MonoBehaviour:
@@ -1346,18 +1345,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157499034}
   m_CullTransparentMesh: 1
---- !u!114 &1157499039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157499034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c334cc3b049732540bd8d3641ae3c64c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1233304528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,7 +1402,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SKIP
+  m_text: SKIP (S)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
   m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}

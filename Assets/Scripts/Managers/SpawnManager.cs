@@ -15,8 +15,9 @@ public class SpawnManager : MonoBehaviour
     private float enemySpawnInterval = 2f; // Enemy spawn cooldown
     private int powerUpMaxCount = 5; // Max quantity of powerups in scene
     private int powerUpCount = 0; // Current quantity of power ups in scene
-    private int killedEnemies = 0;
-    private int difficulty = 1;
+    private int killedEnemies = 0; // Killed enemies counter
+    private int difficulty = 1; // Difficulty multiplier
+    
     void Start()
     {
         if (sm != null && sm != this)
@@ -27,57 +28,22 @@ public class SpawnManager : MonoBehaviour
         {
             sm = this; // Inicialise the spawn manager instance
         }
-        // Continuosly spawn enemies
-        //InvokeRepeating("SpawnEnemyKamikaze", enemySpawnStartDelay, enemySpawnInterval);
-        //InvokeRepeating("SpawnEnemyStatic", 10f, 4f);
+        // Continuosly spawn enemies taking in account the difficulty
         InvokeRepeating("SpawnEnemyKamikazeX", enemySpawnStartDelay, enemySpawnInterval);
         InvokeRepeating("SpawnEnemyStaticX", 10f, 4f);
     }
 
     void Update()
     {
+        // Update the killed enemies counter
         killedEnemies = GameManager.gm.KilledEnemiesCount();
+        // Update difficulty accordingly
         DifficultyIncrease();
-    }
-
-    void SpawnEnemyKamikaze()
-    {
-        // Select a random spawn point
-        int spawnIndex = Random.Range(0, enemySpawnPoints.Length);
-        // Variables for position and rotation of the spawned enemy
-        Vector2 spawnPos = new Vector2();
-        Quaternion spawnRot = enemySpawnPoints[spawnIndex].transform.rotation;
-        // If the spawn point selected is a vertical one
-        if (enemySpawnPoints[spawnIndex].CompareTag("VerticalSpawn"))
-        {
-            // Calculate the enemy position within the horizontal range
-            spawnPos = new Vector2(Random.Range(-horizontalEnemySpawnRange, horizontalEnemySpawnRange), enemySpawnPoints[spawnIndex].transform.position.y);
-        }
-        // If the spawn point is a horizontal one
-        else if (enemySpawnPoints[spawnIndex].CompareTag("HorizontalSpawn"))
-        {
-            // Calculate the enemy position within the vertical range
-            spawnPos = new Vector2(enemySpawnPoints[spawnIndex].transform.position.x, Random.Range(-verticalEnemySpawnRange, verticalEnemySpawnRange));
-        }
-        // Spawn the enemy
-        Instantiate(enemyKamikaze, spawnPos, spawnRot);
-    }
-
-    void SpawnEnemyStatic()
-    {
-        // Select a random spawn point
-        int spawnIndex = Random.Range(0, enemySpawnPoints.Length);
-        // Variables for position and rotation of the spawned enemy
-        Vector2 spawnPos = new Vector2(Random.Range(-8, 8), Random.Range(-3, 3));
-        Quaternion spawnRot = staticSpawn.transform.rotation;
-        // Play enemy spawn sound
-        SoundManager.sm.PlaySound("StaticE_Spawn");
-        // Spawn the enemy
-        Instantiate(enemyStatic, spawnPos, spawnRot);
     }
 
     public void SpawnPowerUp(Vector3 position, Quaternion rotation)
     {
+        // If the amount of power ups in the game is not the max
         if (powerUpCount < powerUpMaxCount)
         {
             // Calculate a random number for spawning power up
@@ -94,6 +60,7 @@ public class SpawnManager : MonoBehaviour
 
     public void ConsumePowerUp()
     {
+        // Consume a power up from the total amount
         if (powerUpCount > 0)
         {
             powerUpCount--;
@@ -104,24 +71,29 @@ public class SpawnManager : MonoBehaviour
     {
         if (killedEnemies >= 0 & killedEnemies < 20)
         {
+            // If the amount of enemies killed is less than 20, set the difficulty to 1
             difficulty = 1;
         }
         if (killedEnemies >= 20 & killedEnemies < 60)
         {
+            // If the amount of enemies killed is more than 20, but less than 60, set the difficulty to 2
             difficulty = 2;
         }
         if (killedEnemies >= 60 & killedEnemies < 120)
         {
+            // If the amount of enemies killed is more than 60, but less than 120, set the difficulty to 3
             difficulty = 3;
         }
         if (killedEnemies >= 120)
         {
+            // If the amount of enemies killed is more than 120, set the difficulty to 4
             difficulty = 4;
         }
     }
 
     private void SpawnEnemyKamikazeX()
     {
+        // Spawn enemies taking in account the difficulty multiplier
         for (int i = 0; i < difficulty; i++)
         {
             // Select a random spawn point
@@ -148,6 +120,7 @@ public class SpawnManager : MonoBehaviour
 
     private void SpawnEnemyStaticX()
     {
+        // Spawn enemies taking in account the difficulty multiplier
         for (int i = 0; i < difficulty; i++)
         {
             // Select a random spawn point
