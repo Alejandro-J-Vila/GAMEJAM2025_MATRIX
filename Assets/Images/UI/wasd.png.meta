@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: f65c7114cac039340bcc0f74c824ef56
+guid: 0f272f3e6a83fde4e87a55a49e45f146
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8314488272523172643
-    second: enemy_kamikaze_0
+      213: -2262122895464096801
+    second: wasd_0
   - first:
-      213: -7881939128382938363
-    second: enemy_kamikaze_1
+      213: -7122173533431488337
+    second: wasd_1
+  - first:
+      213: 1471743797466021535
+    second: wasd_2
+  - first:
+      213: 7459822484115615111
+    second: wasd_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_kamikaze_0
+      name: wasd_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 12
-        width: 488
-        height: 382
+        x: 22
+        y: 17
+        width: 363
+        height: 244
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 32b15e4280ff26370800000000000000
-      internalID: 8314488272523172643
+      spriteID: fdb959936335b90e0800000000000000
+      internalID: -2262122895464096801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wasd_1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 20
+        width: 120
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0a02ff7e4f82d90800000000000000
+      internalID: -7122173533431488337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wasd_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 20
+        width: 121
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9eb858af2fac6410800000000000000
+      internalID: 1471743797466021535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wasd_3
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 17
+        width: 120
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78dee25860d968760800000000000000
+      internalID: 7459822484115615111
       vertices: []
       indices: 
       edges: []
@@ -141,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6fe5aa05d48002d40ba1cafe52d2725c
+    spriteID: 8b940a53d8e08cd419bf1c869d2bf1ef
     internalID: 0
     vertices: []
     indices: 
@@ -151,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      enemy_kamikaze_0: 8314488272523172643
+      wasd_0: -2262122895464096801
+      wasd_1: -7122173533431488337
+      wasd_2: 1471743797466021535
+      wasd_3: 7459822484115615111
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

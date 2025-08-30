@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: f719e8346a76d954c86d60828804d337
+guid: 70573a6d0c0175e43ad136dda38cef13
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7060199289662099444
-    second: help_screen_0
+      213: 6552060196920312030
+    second: arrow_keys_0
+  - first:
+      213: 30064537844054092
+    second: arrow_keys_1
+  - first:
+      213: -4639942764790953303
+    second: arrow_keys_2
+  - first:
+      213: 4337145382710925652
+    second: arrow_keys_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: help_screen_0
+      name: arrow_keys_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 30
+        y: 27
+        width: 362
+        height: 243
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c00b9301722250e90800000000000000
-      internalID: -7060199289662099444
+      spriteID: ed04968e8089dea50800000000000000
+      internalID: 6552060196920312030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_keys_1
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 30
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c48f782b98fca6000800000000000000
+      internalID: 30064537844054092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_keys_2
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 30
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aacd7e83ac9b9fb0800000000000000
+      internalID: -4639942764790953303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow_keys_3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 27
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459d5b31fb2a03c30800000000000000
+      internalID: 4337145382710925652
       vertices: []
       indices: 
       edges: []
@@ -138,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7195a011acc0a374594f7a0cbdf3f9b2
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      help_screen_0: -7060199289662099444
+      arrow_keys_0: 6552060196920312030
+      arrow_keys_1: 30064537844054092
+      arrow_keys_2: -4639942764790953303
+      arrow_keys_3: 4337145382710925652
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

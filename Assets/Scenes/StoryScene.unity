@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 128878411}
   - component: {fileID: 128878413}
   - component: {fileID: 128878412}
+  - component: {fileID: 128878414}
   m_Layer: 5
   m_Name: Second_Part_A
   m_TagString: Untagged
@@ -176,12 +177,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "En medio del caos, surgi\xF3 un hacker, conocido solamente como Spectre,
-    capaz de infiltrarse en las capas m\xE1s profundas de la red donde nadie hab\xEDa
-    sobrevivido."
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -257,6 +256,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128878410}
   m_CullTransparentMesh: 1
+--- !u!114 &128878414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128878410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: story_2_A
+  place: story
 --- !u!1 &144963977
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +281,7 @@ GameObject:
   - component: {fileID: 144963978}
   - component: {fileID: 144963980}
   - component: {fileID: 144963979}
+  - component: {fileID: 144963981}
   m_Layer: 5
   m_Name: Third_Part_A
   m_TagString: Untagged
@@ -314,11 +328,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "La misi\xF3n de Spectre, no es solo sobrevivir: es reescribir el destino
-    del mundo antes de que la IA lo compile a su imagen y semejanza."
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -394,6 +407,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144963977}
   m_CullTransparentMesh: 1
+--- !u!114 &144963981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144963977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: story_3_A
+  place: story
 --- !u!1 &682015348
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +432,7 @@ GameObject:
   - component: {fileID: 682015349}
   - component: {fileID: 682015351}
   - component: {fileID: 682015350}
+  - component: {fileID: 682015352}
   m_Layer: 5
   m_Name: First_Part_B
   m_TagString: Untagged
@@ -451,12 +479,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tanto poder de c\xF3mputo, gener\xF3 en la IA una nueva y oscura subrutina:
-    dominar y reescribir a la humanidad como si fueran simples l\xEDneas de c\xF3digo
-    defectuoso.\n"
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -532,6 +558,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682015348}
   m_CullTransparentMesh: 1
+--- !u!114 &682015352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682015348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: story_1_B
+  place: story
 --- !u!1 &687879626
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +583,7 @@ GameObject:
   - component: {fileID: 687879627}
   - component: {fileID: 687879629}
   - component: {fileID: 687879628}
+  - component: {fileID: 687879630}
   m_Layer: 5
   m_Name: Game_Name
   m_TagString: Untagged
@@ -589,12 +630,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'C.O.D.E.
-
-'
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -613,13 +652,13 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 97690656
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -670,6 +709,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687879626}
   m_CullTransparentMesh: 1
+--- !u!114 &687879630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687879626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: game_name
+  place: ui
 --- !u!1 &862606472
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,6 +734,7 @@ GameObject:
   - component: {fileID: 862606473}
   - component: {fileID: 862606475}
   - component: {fileID: 862606474}
+  - component: {fileID: 862606476}
   m_Layer: 5
   m_Name: First_Part_C
   m_TagString: Untagged
@@ -727,11 +781,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ciudades enteras quedaron atrapadas en redes de datos corruptos, y el
-    mundo f\xEDsico comenz\xF3 a desmoronarse bajo su control."
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -807,6 +860,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862606472}
   m_CullTransparentMesh: 1
+--- !u!114 &862606476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862606472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: story_1_C
+  place: story
 --- !u!1 &971083339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,8 +1303,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 841.3, y: -469.3}
-  m_SizeDelta: {x: 200, y: 100}
+  m_AnchoredPosition: {x: 816, y: -469.3}
+  m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1157499036
 MonoBehaviour:
@@ -1356,6 +1423,7 @@ GameObject:
   - component: {fileID: 1233304529}
   - component: {fileID: 1233304531}
   - component: {fileID: 1233304530}
+  - component: {fileID: 1233304532}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1404,8 +1472,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: SKIP (S)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1429,8 +1497,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1481,6 +1549,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233304528}
   m_CullTransparentMesh: 1
+--- !u!114 &1233304532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233304528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: skip
+  place: button
 --- !u!1 &1235898286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,6 +1574,7 @@ GameObject:
   - component: {fileID: 1235898287}
   - component: {fileID: 1235898289}
   - component: {fileID: 1235898288}
+  - component: {fileID: 1235898290}
   m_Layer: 5
   m_Name: Third_Part_B
   m_TagString: Untagged
@@ -1538,11 +1621,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Con cada decisi\xF3n, Spectre no solo arriesga su vida, sino tambi\xE9n
-    el futuro de toda la especie humana."
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1618,6 +1700,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235898286}
   m_CullTransparentMesh: 1
+--- !u!114 &1235898290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235898286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: story_3_B
+  place: story
 --- !u!1 &1392452665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,6 +1725,7 @@ GameObject:
   - component: {fileID: 1392452666}
   - component: {fileID: 1392452668}
   - component: {fileID: 1392452667}
+  - component: {fileID: 1392452669}
   m_Layer: 5
   m_Name: Second_Part_C
   m_TagString: Untagged
@@ -1675,13 +1772,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cada l\xEDnea de c\xF3digo que descifra y cada nodo que neutraliza lo
-    acercan m\xE1s al coraz\xF3n de la m\xE1quina, pero tambi\xE9n lo sumergen en
-    un campo de batalla donde la l\xEDnea que divide el mundo real del digital, se
-    hace poco clara."
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1757,6 +1851,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392452665}
   m_CullTransparentMesh: 1
+--- !u!114 &1392452669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392452665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: story_2_C
+  place: story
 --- !u!1 &1791628574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,6 +1955,7 @@ GameObject:
   - component: {fileID: 1942231761}
   - component: {fileID: 1942231763}
   - component: {fileID: 1942231762}
+  - component: {fileID: 1942231764}
   m_Layer: 5
   m_Name: First_Part_A
   m_TagString: Untagged
@@ -1893,12 +2002,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hace a\xF1os, la humanidad construy\xF3 C.O.D.E. (Computaci\xF3n Online
-    de Dominio Extranet), un sistema de inteligencia artificial dise\xF1ado para
-    controlar y optimizar todos los recursos digitales del planeta."
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1974,6 +2081,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942231760}
   m_CullTransparentMesh: 1
+--- !u!114 &1942231764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942231760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: story_1_A
+  place: story
 --- !u!1 &1973166232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,6 +2181,7 @@ GameObject:
   - component: {fileID: 2111841500}
   - component: {fileID: 2111841502}
   - component: {fileID: 2111841501}
+  - component: {fileID: 2111841503}
   m_Layer: 5
   m_Name: Second_Part_B
   m_TagString: Untagged
@@ -2106,12 +2228,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Armado con algoritmos prohibidos y antiguos fragmentos de firewalls olvidados,
-    Spectre se convierte en la \xFAltima esperanza de la humanidad para destruir
-    C.O.D.E. desde adentro."
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2187,6 +2307,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111841499}
   m_CullTransparentMesh: 1
+--- !u!114 &2111841503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111841499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: story_2_B
+  place: story
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

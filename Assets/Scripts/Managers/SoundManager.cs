@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
@@ -15,8 +15,14 @@ public class SoundManager : MonoBehaviour
     private static bool inMenus = false; // Flag for not starting over the music when navigating menus
     private Dictionary<string, int> musicMap; // Dictionary that map music names to list index numbers
     private Dictionary<string, int> soundMap; // Dictionary that map sound names to list index numbers
-    private TMP_Text soundToggle; // Reference to the sound toggle
-    private TMP_Text musicToggle; // Reference to the music toggle
+    private Button soundOnBut;
+    private Button soundOffBut;
+    private Button musicOnBut;
+    private Button musicOffBut;
+    public Sprite onEnabled;
+    public Sprite onDisabled;
+    public Sprite offEnabled;
+    public Sprite offDisabled;
 
     void Awake()
     {
@@ -112,116 +118,110 @@ public class SoundManager : MonoBehaviour
 
     private void PlaySceneMusic(string musicKey)
     {
-        // If music is on
-        if (musicOn)
-        {
-            // Stop the current music clip
-            musicAudioSource.Stop();
-            // Select the music clip
-            musicAudioSource.clip = musicList[musicMap[musicKey]];
-            // Activate clip loop
-            musicAudioSource.loop = true;
-            // Play the music clip
-            musicAudioSource.Play();
-        }
+        // Stop the current music clip
+        musicAudioSource.Stop();
+        // Select the music clip
+        musicAudioSource.clip = musicList[musicMap[musicKey]];
+        // Activate clip loop
+        musicAudioSource.loop = true;
+        // Play the music clip
+        musicAudioSource.Play();
     }
 
     public void PlayMusic(string musicName)
     {
-        // If music is on
-        if (musicOn)
-        {
-            // Stop the current clip
-            musicAudioSource.Stop();
-            // Deactivate clip loop
-            musicAudioSource.loop = false;
-            // Play a music clip selected with index from a list of clips stored in the manager
-            musicAudioSource.PlayOneShot(musicList[musicMap[musicName]]);
-        }
+        // Stop the current clip
+        musicAudioSource.Stop();
+        // Deactivate clip loop
+        musicAudioSource.loop = false;
+        // Play a music clip selected with index from a list of clips stored in the manager
+        musicAudioSource.PlayOneShot(musicList[musicMap[musicName]]);
     }
 
     public void PlaySound(string soundName)
     {
-        // If sound is on
-        if (soundOn)
-        {
-            // Play sound clip selected using the index obtained from the sound map
-            soundsAudioSource.PlayOneShot(soundList[soundMap[soundName]]);
-        }
+        // Play sound clip selected using the index obtained from the sound map
+        soundsAudioSource.PlayOneShot(soundList[soundMap[soundName]]);
     }
 
     private void SetToggles()
     {
-        // Get the reference to the toggles and save the text component for further modification when interacted
-        soundToggle = GameObject.FindGameObjectWithTag("SoundToggle").GetComponentInChildren<TMP_Text>();
-        musicToggle = GameObject.FindGameObjectWithTag("MusicToggle").GetComponentInChildren<TMP_Text>();
+        // Get the reference to the toggles
+        soundOnBut = GameObject.FindGameObjectWithTag("SoundON").GetComponent<Button>();
+        soundOffBut = GameObject.FindGameObjectWithTag("SoundOFF").GetComponent<Button>();
+        musicOnBut = GameObject.FindGameObjectWithTag("MusicON").GetComponent<Button>();
+        musicOffBut = GameObject.FindGameObjectWithTag("MusicOFF").GetComponent<Button>();
         // If sound is on or off
         if (soundOn)
         {
-            // Set the toggle text
-            soundToggle.SetText("SOUND ON");
+            soundOnBut.image.sprite = onEnabled;
+            soundOffBut.image.sprite = offDisabled;
         }
         else
         {
-            // Set the toggle text
-            soundToggle.SetText("SOUND OFF");
+            soundOnBut.image.sprite = onDisabled;
+            soundOffBut.image.sprite = offEnabled;
         }
         // If music is on or off
         if (musicOn)
         {
-            // Set the toggle text
-            musicToggle.SetText("MUSIC ON");
+            musicOnBut.image.sprite = onEnabled;
+            musicOffBut.image.sprite = offDisabled;
         }
         else
         {
-            // Set the toggle text
-            musicToggle.SetText("MUSIC OFF");
+            musicOnBut.image.sprite = onDisabled;
+            musicOffBut.image.sprite = offEnabled;
         }
     }
 
     public void SoundOn()
     {
-        // If sound is on
-        if (soundOn)
-        {
-            // Turn it off
-            soundOn = false;
-            // Update toggle text
-            soundToggle.SetText("SOUND OFF");
-            // Mute the sound audio source
-            soundsAudioSource.mute = true;
-        }
-        else
-        {
-            // If sound is off, turn it on
-            soundOn = true;
-            // Update toggle text
-            soundToggle.SetText("SOUND ON");
-            // Unmute the sound audio source
-            soundsAudioSource.mute = false;
-        }
+        // Turn on sound flag
+        soundOn = true;
+        // Unmute the sound audio source
+        soundsAudioSource.mute = false;
+        soundOnBut.image.sprite = onEnabled;
+        soundOffBut.image.sprite = offDisabled;
+    }
+
+    public void SoundOff()
+    {
+        // Turn off sound flag
+        soundOn = false;
+        // Mute the sound audio source
+        soundsAudioSource.mute = true;
+        soundOnBut.image.sprite = onDisabled;
+        soundOffBut.image.sprite = offEnabled;
     }
 
     public void MusicOn()
     {
-        // If music is on
-        if (musicOn)
-        {
-            // Turn it off
-            musicOn = false;
-            // Update toggle text
-            musicToggle.SetText("MUSIC OFF");
-            // Mute the music audio source
-            musicAudioSource.mute = true;
-        }
-        else
-        {
-            // If music is off, turn it on
-            musicOn = true;
-            // Update toggle text
-            musicToggle.SetText("MUSIC ON");
-            // Unmute the music audio source
-            musicAudioSource.mute = false;
-        }
+        // Turn music flag on
+        musicOn = true;
+        // Unmute the music audio source
+        musicAudioSource.mute = false;
+        musicOnBut.image.sprite = onEnabled;
+        musicOffBut.image.sprite = offDisabled;
+    }
+
+    public void MusicOff()
+    {
+        // Turn music flag off
+        musicOn = false;
+        // Mute the music audio source
+        musicAudioSource.mute = true;
+        musicOnBut.image.sprite = onDisabled;
+        musicOffBut.image.sprite = offEnabled;
+    }
+
+    public bool SoundState()
+    {
+        return soundOn;
+    }
+
+    public bool MusicState()
+    {
+        return musicOn;
     }
 }

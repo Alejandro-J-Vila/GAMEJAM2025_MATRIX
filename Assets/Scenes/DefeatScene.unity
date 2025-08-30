@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 682015349}
   - component: {fileID: 682015351}
   - component: {fileID: 682015350}
+  - component: {fileID: 682015352}
   m_Layer: 5
   m_Name: First_Part_B
   m_TagString: Untagged
@@ -176,12 +177,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "C.O.D.E. se convirti\xF3 en la IA m\xE1s avanzada e interconectada del
-    planeta, obteniendo acceso a todas las redes de seguridad del mundo, en cuesti\xF3n
-    de d\xEDas."
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -257,6 +256,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682015348}
   m_CullTransparentMesh: 1
+--- !u!114 &682015352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682015348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: defeat_1_B
+  place: story
 --- !u!1 &687879626
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +281,7 @@ GameObject:
   - component: {fileID: 687879627}
   - component: {fileID: 687879629}
   - component: {fileID: 687879628}
+  - component: {fileID: 687879630}
   m_Layer: 5
   m_Name: Defeat_Text
   m_TagString: Untagged
@@ -314,10 +328,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PERDISTE!
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -336,13 +350,13 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 97690656
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -393,6 +407,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687879626}
   m_CullTransparentMesh: 1
+--- !u!114 &687879630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687879626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: defeat_title
+  place: story
 --- !u!1 &779608741
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,6 +432,7 @@ GameObject:
   - component: {fileID: 779608742}
   - component: {fileID: 779608744}
   - component: {fileID: 779608743}
+  - component: {fileID: 779608745}
   m_Layer: 5
   m_Name: Restart_Text
   m_TagString: Untagged
@@ -450,10 +479,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Apret\xE1 R para intentar otra vez"
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -529,6 +558,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779608741}
   m_CullTransparentMesh: 1
+--- !u!114 &779608745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779608741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: presrtor_msj
+  place: ui
 --- !u!1 &862606472
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +583,7 @@ GameObject:
   - component: {fileID: 862606473}
   - component: {fileID: 862606475}
   - component: {fileID: 862606474}
+  - component: {fileID: 862606476}
   m_Layer: 5
   m_Name: First_Part_C
   m_TagString: Untagged
@@ -586,11 +630,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "La humanidad fu\xE9 exterminada de la faz de la tierra, que entr\xF3 en
-    una era oscura gobernada por un c\xF3digo eterno."
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -666,6 +709,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862606472}
   m_CullTransparentMesh: 1
+--- !u!114 &862606476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862606472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: defeat_1_C
+  place: story
 --- !u!1 &971083339
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4f30a6a4cc8734c8660f476c8d6ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 90
+  scrollSpeed: 120
   panelType: defeat
 --- !u!1 &992323747
 GameObject:
@@ -1066,6 +1123,7 @@ GameObject:
   - component: {fileID: 1235898287}
   - component: {fileID: 1235898289}
   - component: {fileID: 1235898288}
+  - component: {fileID: 1235898290}
   m_Layer: 5
   m_Name: Quit_Text
   m_TagString: Untagged
@@ -1112,10 +1170,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Apret\xE1 Q para salir"
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1191,6 +1249,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235898286}
   m_CullTransparentMesh: 1
+--- !u!114 &1235898290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235898286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: pressqtoq_msj
+  place: ui
 --- !u!1 &1942231760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,6 +1274,7 @@ GameObject:
   - component: {fileID: 1942231761}
   - component: {fileID: 1942231763}
   - component: {fileID: 1942231762}
+  - component: {fileID: 1942231764}
   m_Layer: 5
   m_Name: First_Part_A
   m_TagString: Untagged
@@ -1248,10 +1321,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spectre fue consumido por la IA.
+  m_text: Lore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
-  m_sharedMaterial: {fileID: 6942521571491850128, guid: a73d5f14d16abd14eaae3d95b2ae589e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
+  m_sharedMaterial: {fileID: 7042170849161455575, guid: 682a590fd4981734ebd310b872e7a5db, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1327,6 +1400,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942231760}
   m_CullTransparentMesh: 1
+--- !u!114 &1942231764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942231760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a827945fce0c9b84b8227ae3b03e1860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textId: defeat_1_A
+  place: story
 --- !u!1 &1973166232
 GameObject:
   m_ObjectHideFlags: 0

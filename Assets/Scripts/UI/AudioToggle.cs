@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class AudioToggle : MonoBehaviour
 {
-    public void SoundToggle()
+    public void SoundOn()
     {
-        // Toggle sound on/off
         SoundManager.sm.SoundOn();
     }
 
-    public void MusicToggle()
+    public void SoundOff()
     {
-        // Togle music on/off
+        SoundManager.sm.SoundOff();
+    }
+
+    public void MusicOn()
+    {
         SoundManager.sm.MusicOn();
+    }
+
+    public void MusicOff()
+    {
+        SoundManager.sm.MusicOff();
     }
 }

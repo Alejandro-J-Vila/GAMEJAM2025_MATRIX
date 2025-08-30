@@ -10,9 +10,15 @@ TagManager:
   - MusicPlayer
   - SoundPlayer
   - Enemy
+  - Skip
+  - SoundON
+  - SoundOFF
+  - MusicON
+  - MusicOFF
   - SoundToggle
   - MusicToggle
-  - Skip
+  - ToggleES
+  - ToggleEN
   layers:
   - Default
   - TransparentFX

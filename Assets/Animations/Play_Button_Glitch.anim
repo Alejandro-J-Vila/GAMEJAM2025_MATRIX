@@ -689,49 +689,49 @@ AnimationClip:
   m_Events:
   - time: 0.5833333
     functionName: ChangeText
-    data: P AY
+    data: '#__$*-_'
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.6666667
     functionName: ChangeText
-    data: PLA
+    data: 01_11_0
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.9166667
     functionName: ChangeText
-    data: ' LaY'
+    data: ---_-
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1
     functionName: ChangeText
-    data: plAy
+    data: '>:-D'
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.4166666
     functionName: ChangeText
-    data: P  Y_
+    data: C_0;D-3,
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.5
     functionName: ChangeText
-    data: plaY-_
+    data: '%&__/+'
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 2
-    functionName: ChangeText
-    data: PLAY
+    functionName: UpdateText
+    data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

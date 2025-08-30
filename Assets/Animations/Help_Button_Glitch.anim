@@ -509,49 +509,49 @@ AnimationClip:
   m_Events:
   - time: 0.6666667
     functionName: ChangeText
-    data: ' ELP'
+    data: _319+
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.75
     functionName: ChangeText
-    data: H  _P
+    data: ..-.-...-
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1
     functionName: ChangeText
-    data: heLp
+    data: 0101110
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.0833334
     functionName: ChangeText
-    data: HeLp
+    data: _-_-_-+
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.5833334
     functionName: ChangeText
-    data: ___P
+    data: '>:-P'
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.6666666
     functionName: ChangeText
-    data: _E__
+    data: /.s_+?
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 2
-    functionName: ChangeText
-    data: HELP
+    functionName: UpdateText
+    data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

@@ -44,12 +44,6 @@ public class PlayerController2D : MonoBehaviour
             // Show/hide pause panel
             GameManager.gm.PauseGame();
         }
-        // If the player hits the help button
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            // Show/hide help panel
-            GameManager.gm.ShowHelp();
-        }
     }
 
     void FixedUpdate()

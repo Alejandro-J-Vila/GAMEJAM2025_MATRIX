@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,9 +10,9 @@ public class GameManager : MonoBehaviour
     public GameObject[] lives; // Player lives references
     public Image progressFill; // Progress bar fill image
     public GameObject pausePanel; // Game pause panel
-    public GameObject helpPanel; // Help panel
+    public GameObject settingsPanel; // Settings panel
     private bool paused = false; // Paused game flag
-    private bool help = false; // Help flag
+    private bool settings = false; // Settings flag
     private float progress = 0f; // Amount of progress
     private int killedEnemiesCount = 0; // Amount of enemies killed
     private float progressIncrement = 0.005f; // Increment progress (1/200) 200 enemies needed to win
@@ -30,11 +29,11 @@ public class GameManager : MonoBehaviour
         }
         // Hide help and pause panels
         pausePanel.SetActive(paused);
-        helpPanel.SetActive(help);
+        settingsPanel.SetActive(settings);
         // Set progress bar fill to empty
         progressFill.fillAmount = progress;
-        // Show game help at the start of the game
-        ShowHelp();
+        // Pause the game at the start to show help
+        PauseGame();
     }
 
     public void DamagePlayer()
@@ -94,43 +93,32 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
-        // If the help panel is not active
-        if (!help)
+        // Enable/disable the pause screen also pausing/unpausing the game
+        if (paused)
         {
-            // Enable/disable the pause screen also pausing/unpausing the game
-            if (paused)
-            {
-                Time.timeScale = 1;
-                paused = false;
-                pausePanel.SetActive(paused);
-            }
-            else
-            {
-                Time.timeScale = 0;
-                paused = true;
-                pausePanel.SetActive(paused);
-            }
+            Time.timeScale = 1;
+            paused = false;
+            pausePanel.SetActive(paused);
+        }
+        else
+        {
+            Time.timeScale = 0;
+            paused = true;
+            pausePanel.SetActive(paused);
         }
     }
 
-    public void ShowHelp()
+    public void ShowSettings()
     {
-        // If the pause panel is not active
-        if (!paused)
+        if (settings)
         {
-            // Enable/disable the help screen also pausing/unpausing the game
-            if (help)
-            {
-                Time.timeScale = 1;
-                help = false;
-                helpPanel.SetActive(help);
-            }
-            else
-            {
-                Time.timeScale = 0;
-                help = true;
-                helpPanel.SetActive(help);
-            }
+            settings = false;
+            settingsPanel.SetActive(settings);
+        }
+        else
+        {
+            settings = true;
+            settingsPanel.SetActive(settings);
         }
     }
 
