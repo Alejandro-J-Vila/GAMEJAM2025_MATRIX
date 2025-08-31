@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TextManager : MonoBehaviour
 {
     public static TextManager tm; // Static reference to the text manager
-    private static string language = "es";
+    private static string language = "es"; // Language of the game
     private string[] storyTextEN; // List of texts contained in the game story in english
     private string[] buttonsTextEN; // List of texts contained in the game buttons in english
     private string[] uiTextEN; // List of texts contained in the game ui in english
@@ -19,10 +19,10 @@ public class TextManager : MonoBehaviour
     private Dictionary<string, int> buttonsTextdMap; // Dictionary that map buttons text names to list index numbers
     private Dictionary<string, int> uiTextMap; // Dictionary that map ui text names to list index numbers
     private Dictionary<string, int> creditsTextMap; // Dictionary that map credits text names to list index numbers
-    private Button spanishToggle;
-    private Button englishToggle;
-    public Sprite toggleEnabled;
-    public Sprite toggleDisabled;
+    private Button spanishToggle; // Reference to the spanish language toggle
+    private Button englishToggle; // Reference to the english language toggle
+    public Sprite toggleEnabled; // Enabled toggle sprite
+    public Sprite toggleDisabled; // Disabled toggle sprite
 
     void Awake()
     {
@@ -62,7 +62,7 @@ public class TextManager : MonoBehaviour
             "CREDITS",
             "QUIT",
             "BACK (Q)",
-            "BACK (P)",
+            "CLOSE (P)",
             "SKIP (S)",
             "QUIT (Q)"
         };
@@ -126,7 +126,7 @@ public class TextManager : MonoBehaviour
             "CRÉDITOS",
             "SALIR",
             "ATRÁS (Q)",
-            "ATRÁS (P)",
+            "CERRAR (P)",
             "SALTAR (S)",
             "SALIR (Q)"
         };
@@ -195,7 +195,7 @@ public class TextManager : MonoBehaviour
             { "credits", 5 },
             { "quit", 6 },
             { "back_q", 7 },
-            { "back_p", 8 },
+            { "close", 8 },
             { "skip", 9 },
             { "quit_q", 10 }
         };
@@ -220,7 +220,7 @@ public class TextManager : MonoBehaviour
             { "pressqtoq_msj", 14 },
             { "presrtor_msj", 15 }
         };
-        // Create the music map
+        // Create the credits text map
         creditsTextMap = new Dictionary<string, int>
         {
             // Add all credits text names maped to the corresponding index in the list
@@ -239,7 +239,7 @@ public class TextManager : MonoBehaviour
         };
         // Set this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
-        // Subscribe to the scene loaded event to configure music when different scenes are loaded
+        // Subscribe to the scene loaded event to configure language when different scenes are loaded
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -248,7 +248,7 @@ public class TextManager : MonoBehaviour
         // If the scene loaded is the settings
         if (scene.name == "SettingsScene")
         {
-            // Set the sound and music toggles
+            // Set the language toggles
             SetLanguageToggles();
         }
     }
@@ -258,6 +258,7 @@ public class TextManager : MonoBehaviour
         // Get the reference to the toggles
         spanishToggle = GameObject.FindGameObjectWithTag("ToggleES").GetComponent<Button>();
         englishToggle = GameObject.FindGameObjectWithTag("ToggleEN").GetComponent<Button>();
+        // Depending on the selected language, activate and deactivate the corresponding toggles by changing the sprite
         if (language == "es")
         {
             spanishToggle.image.sprite = toggleEnabled;
@@ -272,6 +273,7 @@ public class TextManager : MonoBehaviour
 
     public void SetLanguageEnglish()
     {
+        // Set the language to english and update the toggles
         language = "en";
         englishToggle.image.sprite = toggleEnabled;
         spanishToggle.image.sprite = toggleDisabled;
@@ -279,6 +281,7 @@ public class TextManager : MonoBehaviour
 
     public void SetLanguageSpanish()
     {
+        // Set the language to spanish and update the toggles
         language = "es";
         spanishToggle.image.sprite = toggleEnabled;
         englishToggle.image.sprite = toggleDisabled;
@@ -286,11 +289,13 @@ public class TextManager : MonoBehaviour
 
     public string GetLanguage()
     {
+        // Get the current game language
         return language;
     }
 
     public string GetText(string place, string textId)
     {
+        // Get the corresponding text from the list of texts in the story
         if (place == "story")
         {
             int tid = storyTextMap[textId];
@@ -303,6 +308,7 @@ public class TextManager : MonoBehaviour
                 return storyTextEN[tid];
             }
         }
+        // Get the corresponding text from the list of texts in the buttons
         if (place == "button")
         {
             int tid = buttonsTextdMap[textId];
@@ -315,6 +321,7 @@ public class TextManager : MonoBehaviour
                 return buttonsTextEN[tid];
             }
         }
+        // Get the corresponding text from the list of texts in the ui
         if (place == "ui")
         {
             int tid = uiTextMap[textId];
@@ -327,6 +334,7 @@ public class TextManager : MonoBehaviour
                 return uiTextEN[tid];
             }
         }
+        // Get the corresponding text from the list of texts in the credits
         if (place == "credits")
         {
             int tid = creditsTextMap[textId];
@@ -339,6 +347,7 @@ public class TextManager : MonoBehaviour
                 return creditsTextEN[tid];
             }
         }
+        // Default return for catching errors
         return "";
     }
 }

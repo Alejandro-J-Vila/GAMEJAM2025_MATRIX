@@ -10,6 +10,8 @@ public class PlayerController2D : MonoBehaviour
     public string damageSoundID; // Id of the damage sound
     public Sprite frontSprite; // Reference to the front sprite
     public Sprite backSprite; // Reference to the back sprite
+    public ParticleSystem healEffect; // Reference to the healing particle effect
+    public ParticleSystem damageEffect; // Reference to the damage particle effect
     private SpriteRenderer sr; // Sprite renderer used to display the sprites
     private Rigidbody2D rb; // Rigidbody2D component of the player
     private Vector2 movement; // Direction of player movement
