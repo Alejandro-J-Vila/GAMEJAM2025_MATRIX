@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      static_enemy_spritesheet_0: 3360056595236027582
+      static_enemy_spritesheet_1: 2195480754603757075
+      static_enemy_spritesheet_2: -2354480622176252371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
